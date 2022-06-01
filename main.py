@@ -9,10 +9,16 @@ def json_serial(obj):
         return serial
 
 
-with open('test/email_ynab.eml', 'rb') as fhdl:
+with open('test/0_HJqO8GiDxgfkCfd2EWk-PV5RauFjgRHWKp5S6Qo6AjscIKsEzQXjaxdlq07v4KqC-Jij0jAWXTnivO6SiRcwDw==.eml', 'rb') as fhdl:
     raw_email = fhdl.read()
+
 
 ep = eml_parser.EmlParser()
 parsed_eml = ep.decode_email_bytes(raw_email)
 
-print(json.dumps(parsed_eml, default=json_serial))
+
+print(parsed_eml['header']['subject'])
+print(parsed_eml['header']['date'])
+
+
+
