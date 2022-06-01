@@ -1,0 +1,2832 @@
+Return-path: <bounces+11947996-02be-julien=boriasse.com@abmail.news.youneedabudget.com>
+Original-recipient: rfc822;julien@boriasse.com
+Received: from ms11p00im-qufv17084201.me.com by p104-mailgateway-smtp-54fc6cd878-4n852 (mailgateway 2214B364)
+	with SMTP id ffb76817-39da-4605-a7b2-9df282ebb302 
+	for <julien@boriasse.com>; Mon, 9 May 2022 01:52:07 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: ffb76817-39da-4605-a7b2-9df282ebb302
+Received: from o2227.abmail.news.youneedabudget.com (o2227.abmail.news.youneedabudget.com [149.72.167.170])
+	by ms11p00im-qufv17084201.me.com (Postfix) with ESMTPS id A54EB5C00EB
+	for <julien@boriasse.com>; Mon,  9 May 2022 01:52:05 +0000 (UTC)
+X-ICL-SCORE: 3.3330332300
+X-ICL-INFO: GAtbVUseBVFGSVVESgMGUldZCh4MXUMRSFsIVVhDQ19XFwkZHRIWBxFERBUXRVgBEApNRkkJAlVM
+ QFBaSAJUB1gTExsRVVhfFxYUHhlDRQdbGgkaOFFUDxQQClkWVUERWwAJAhZVUwYUGxMTH1VCTBYW
+ C1VYVlJfVxcDAAseTw0AFwMSHFFUFxEeAwNWU1kPV1kVHggNFFNBQEhASh4HVEJXV0BIEhYKEBUJ
+ SlpfBFBHTkgWGl1XCxlXCBIPQxgbGgwIEh1UVwAAHQESDB5VDRhbRgcMQgtAGktURU8eVwAYGA8b
+ Vl5TFQZXHxgNXlMHERgEAhxXUxZbGgkaWhBSBkhbCBIPQxgbGgwIEh1UVwAAHQESDB5VDRhbRhoR
+ VAtASSERICdaUVceLRJFIWdXMj8RJC0UcVEiEhwJBxdUGwsGFBIHHB0FT0dHRFcKUwtAHwwKHh1e
+ dgAaCw8WC0NTTBYWC1U=
+Authentication-Results: dmarc.icloud.com; dmarc=pass header.from=news.youneedabudget.com
+X-DMARC-Info: pass=pass; dmarc-policy=reject; s=r1; d=r1; pdomain=youneedabudget.com
+X-DMARC-Policy: v=DMARC1; p=reject; pct=100; rua=mailto:re+l9tyseale93@dmarc.postmarkapp.com, mailto:925ae90a0394200@rep.dmarcanalyzer.com; ruf=mailto:925ae90a0394200@for.dmarcanalyzer.com; sp=reject;
+Authentication-Results: dkim-verifier.icloud.com;
+	dkim=pass (2048-bit key) header.d=news.youneedabudget.com header.i=@news.youneedabudget.com header.b=Lr/yDFee
+Authentication-Results: spf.icloud.com; spf=pass (spf.icloud.com: domain of bounces+11947996-02be-julien=boriasse.com@abmail.news.youneedabudget.com designates 149.72.167.170 as permitted sender) smtp.mailfrom="bounces+11947996-02be-julien=boriasse.com@abmail.news.youneedabudget.com"
+Received-SPF: pass (spf.icloud.com: domain of bounces+11947996-02be-julien=boriasse.com@abmail.news.youneedabudget.com designates 149.72.167.170 as permitted sender) receiver=spf.icloud.com; client-ip=149.72.167.170; helo=o2227.abmail.news.youneedabudget.com; envelope-from="bounces+11947996-02be-julien=boriasse.com@abmail.news.youneedabudget.com"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=news.youneedabudget.com;
+	h=content-type:from:mime-version:subject:reply-to:to;
+	s=s1; bh=z29c/CjXHJkUFeBD3TDV12SYYu271kvjGD1ocxg6aF0=;
+	b=Lr/yDFeevUEcC+1MpWxSOiLK1G1hCjXlCocW4lUrEmzd1W/py0+/Ll6suPyKwUefnohU
+	pRlhGiBnnEbRqcFPGLfa7elBxu0Tu7aw2c8gxtwTqN/d7ZafwOmFWGGFy1ZYeQfASW+5FI
+	RQzL/O0d7XhoRaa8hsgWiToZcE/xF2paGkj4LfbjWFuncxPKGLynfK9yzFes/7gybQ7aeX
+	yO4YKU1MoeJhWIc/R1gwtWEDFdkh44zX8LaSKGOBUK5oOa+lWISmRb/8AbW9kCkGhb3SwP
+	GYBQM68C5KRJ/wwj3rFCMvb5IL+LeB6LsRxQ0D5GQ5Qyf7ZK4m6O1htsAKiHzzPg==
+Received: by filterdrecv-856c456d9f-n95wm with SMTP id filterdrecv-856c456d9f-n95wm-1-627873C4-6
+        2022-05-09 01:52:04.279141227 +0000 UTC m=+2778966.238370707
+Received: from MTE5NDc5OTY (unknown)
+	by geopod-ismtpd-3-2 (SG) with HTTP
+	id XwW_jg5kTt2YWaPJhBZlAg
+	Mon, 09 May 2022 01:52:04.156 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=204351a044f636e2e1929753438680e712832cbc0030ff7716b4688337a7
+Date: Mon, 09 May 2022 01:52:04 +0000 (UTC)
+From: YNAB Weekly Roundup <email@news.youneedabudget.com>
+Mime-Version: 1.0
+Message-ID: <XwW_jg5kTt2YWaPJhBZlAg@geopod-ismtpd-3-2>
+Subject: Confessions of a budget nerd
+Reply-To: help@youneedabudget.com
+X-SG-EID: 
+ =?us-ascii?Q?wLGI0opeRaBDsfP5M8qQayBBORqyLtsHJiF17jBTyJmg2Z+7i7JH1jn2YvzRGp?=
+ =?us-ascii?Q?MjAhIc0WNGMBh3t7AS=2F0=2FCX2RMyvk78D2v04gOT?=
+ =?us-ascii?Q?1dkAAoIXMT5bmozILqiMbRfE+BLjmNCcDZW8sGb?=
+ =?us-ascii?Q?8m6CFN83R5YtimvmSCGlW2j2g2YT4sp1fmNkmsL?=
+ =?us-ascii?Q?dP9dzkLG0aY3g1DllyOZH57SKApUfhJumSEb3+P?=
+ =?us-ascii?Q?naQlNvFPmC=2FJ0JFDG8HNzlH50ub1Iq78j8+TOoo?=
+ =?us-ascii?Q?Wyr18XQA+f2flgqcXNNfQ=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FKvUYPFb2vwyNNeBc9bJi?=
+ =?us-ascii?Q?ChMJ4ebQp4hsgu12VVuSpHxPBDCsb8A88ZUniDJ?=
+ =?us-ascii?Q?aleMXsiv0JXlA9Se1o4vn4Hv0NE4Jma4B9IEe=2Fj?=
+ =?us-ascii?Q?9HPSIb4OyLTm6RHMQd+MjBP7zjuwC7SveGJj8pl?=
+ =?us-ascii?Q?HCvWErVNOZ28YEjyo7cX940CEESTb1JRYL7kPdg?=
+ =?us-ascii?Q?Kp6d12i8e1EJtkQMmkwjdjFmKGxyGb5CmtiZcnp?=
+ =?us-ascii?Q?77cJSvz18tU3t9f+4BdbK4=2Fd0ZgQ8V4o1ZJ7sAQ?=
+ =?us-ascii?Q?MgKwrC0OPZS3PrvMOxfvoYCRWa5QNFch67pQhj0?=
+ =?us-ascii?Q?=2FOkyQ181jtjDCVTY5uV1cTC5KLuT0hpli2BLtMZ?=
+ =?us-ascii?Q?LmdvfONJkXvPNQ1ZsMMOexPiSHKrYx8DFfE+=2F8x?=
+ =?us-ascii?Q?SwQpV45cKTJCPX2rreBYl1DVAZKYhjJDgYAZTm+?=
+ =?us-ascii?Q?Mb4LeRMJt=2F+8J04k2fXfVTZ97eVn=2FTIAyhUaxKB?=
+ =?us-ascii?Q?f6MzmnIy5HsLugMCpL6fV?=
+To: julien@boriasse.com
+X-Entity-ID: vIIsq8sX7nIRwhMHDwAJrw==
+X-MANTSH: 1TEIXR1kbG1oaGkNHB1tfTFwbGhodGx4aGxEKTEMXGxoEGxsYBBMSBBMTEBseGh8
+ aEQpMWRcZGxEKWUQXekYSZhxnGRpYYXMRCllNF2RFRE8RCllJFxpxGhAadwYbG3EdEhAcG3cGG
+ BoGGhEKWV4XbGx5EQpDThdebmZjE2BkQXxkZXxMa1p/Zkt8cm9IH31NeRsSG0YHSBEKWFwXGQQ
+ aBB4cB0sfGxkbTB0bBRsaBBMEGwQdHhAbHhofGhEKXlkXcFhCQkIRCk1cFwcbGxsRCkxaF3ttX
+ U1BEQpFWRdoa2sRCkxfF3oFBQUFBQUFBQUdEQpMRhdja2sRCkNaFxseEwQdGAQbHB0EGx0aEQp
+ CXhcbEQpCXBcbEQpCSxduTGd+SUBhQX1IcxEKQkkXY1NEekBMbm5/cEsRCkJFF28daGlSX1kTb
+ ngeEQpCThdjU0R6QExubn9wSxEKQkwXYmxkaGFlWn57bhwRCkJsF2NpY1JAGQVMSBoeEQpCQBd
+ tf0Vubn1tblxdZBEKQlgXYAV5QAFjQhJhbV0RCk1eFxsRCnBnF25PZEBHE2t/fF9mEAceHxEKc
+ GgXenJJRnhJW1oBZH8QGhEKcGgXaUdNXRNrZBNEElsQGRoRCnBoF2ByAV1QYVxzY3tQEBoRCnB
+ oF2NlXFNmeAV/Q1h6EBkaEQpwaBdnXh4dGUEfWHsaYxAaEQpwfRdkc0ZdXUxAQwFjXhAaEQpwf
+ RdjRWwFc3N5HXMdaBAaEQpwfRdlWm1CRmBkYHxaTRAaEQpwfRdgbRwbbwFdf24ebhAaEQpwfRd
+ lQHNtGRtZWkNbXRAaEQpwfRdmZAUdekNaQR5yQRAaEQpwfRdmHVJZZFhJYE1ofhAaEQpwfRdgf
+ hxpeBtpb0d4RhAaEQpwfRdvXVB9ZktcXlBtExAaEQpwfRdlBV95TF1jEmNFTBAaEQpwfRdpS31
+ hZE0bZ0RAWhAaEQpwfRdmT2RNWwFsQHASXxAaEQpwfRdoTHxeG1sYeUt+SBAaEQpwfRd6HBN6Z
+ BIec2hyRxAaEQpwfRdkGmdeGRMFYh0cTxAaEQpwfRdsUB1+QXxCHxx4QBAaEQpwfxdla2xOf1l
+ JXUFAfBAHHh8RCnBfF2JteEV+QXprH2V+EBkaEQpwbBduUFMSAUBjbG1TYxAZGhEKbX4XGxEKW
+ E0XSxE=
+X-CLX-Shades: None
+X-Proofpoint-ORIG-GUID: tDLI9JNkVNOVfApULaVXEb5WgS181l-b
+X-Proofpoint-GUID: tDLI9JNkVNOVfApULaVXEb5WgS181l-b
+
+--204351a044f636e2e1929753438680e712832cbc0030ff7716b4688337a7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+
+Confessions of a Budget Nerd
+=E2=80=94 May 9, 2022 =E2=80=94
+
+Hello, and welcome to the Weekly Roundup, YNABers! Have you ever danced whe=
+n your reconciliation matches up to
+the penny? Do you sometimes just scroll, scroll, scroll through your budget=
+ because it=E2=80=99s relaxing?=20
+You=E2=80=99re not the only one. Today we=E2=80=99re sharing budget confess=
+ions from Ben and Ernie, and from you, our community.
+Plus we look at the age-old good debt/bad debt question and give you a tip =
+on how to budget dollars
+even when it=E2=80=99s not payday.
+
+Quiz question: =E2=80=9CCash Stuffing=E2=80=9D is a popular topic on TikTok=
+. If you saw one of these #cashstuffing videos,
+what would you be watching?=20
+
+* Someone taking out an endless stream of bills from their pocket
+* A Build-a-Bear=C2=AE being stuffed with cash
+* Turkey stuffing being made with paper money cubes
+* Someone tucking money into plastic envelopes in a binder
+
+(Answer at the bottom)
+
+Dive in:=20
+
+* Confessions of a Budget Nerd (Watch/Listen)=20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtU-2FJyFpg7ZzPOsq9EMTcXHQfQITUFNKLzdkNkbvHLw485y1b_4juuG5DfhRl7CTJQ8ZIO5wR=
+sm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2Ila=
+Zv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadw=
+iSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-=
+2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM=
+2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6=
+-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbI=
+oS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07=
+irsKFMClY8GP2uJ3n52VEF4gkyIbOBmGg1tH90w-2BGuFv-2FuSG16Nzt8tHSWQep73kiH1ejzT=
+uSiQJxoEjqxtVx4M54M9gEy05Kd-2BULjV-2FX2kkQKn6CEIrkdF0TGYqjQu1zsdIZXNFjbextm=
+ll-2Fiub4tujb3fpcgRQRthcUQV93kOAg-3D )
+
+* Is All Debt Bad Debt? (Read)=20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtTEcFT8hfo5otvD-2BhE3ylbCtl8czZlbXTnVDUB1uh-2BkfajqjkvvmCqjDqHZ8lwvev-2Fqd=
+ijBL5FBS4S2BwtNeQO7bz5YGRNEKyHf87y-2BwnmWlLUhOLMoliHOfrGCrGftD8kxu3f4-2BzZm=
+-2FosYaaW9aW05lURdCCaOHXAec9OpqT-2F8SmTMeys55Kuqog9XFxpAHCnrEXk-2BdiW-2BRQH=
+DK0uTpELg-3DUT_l_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwW=
+sJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR=
+7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94=
+g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9y=
+FhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvS=
+kbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4p=
+Q05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjC=
+MfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4riBtKMhvMe1d=
+YGE-2B7tLWnrUWJBg-2FtC9ztwfkx6DzBoWCpIbdPtD4S8ajjWNyUhclCkswZ-2B8Ei-2FwPP6j=
+8aWGKi-2BNNV-2F-2FFqD2KUACPBtNcLBShxS-2B-2B24kp38zHSfFirDbTDmXxYQSB7gYo0f0t=
+VX4paQ-3D )
+
+
+* A How-Not-To: The Budget Confessional (Read)=20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtTEcFT8hfo5otvD-2BhE3ylbBb-2BZTXOzIWgP1IMvVs7pZphJN2DCAgoDq3jSnHBtWa2UTOjZ=
+kgPp-2BBsG9npgdbtxkAn8MKI1fSzM1BEnJIgUj28HxEvarJGjXFB8ijQGed6Nf6pZ6rzL15gCS=
+uWFA1xgbRDykfUmgR2maWIPtQ8mKkLx2JbpO53GTg7hiCEcR6qmWbl41Z0kq-2B0d9Npz9fhNQH=
+hC6-2Bu8Q6DRm-2BiwD07BqLrxFS_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9=
+JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOr=
+DjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1=
+BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa=
+9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53Ydzuv=
+VBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BB=
+JwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2Bgyl=
+baDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4=
+kLR9F2kccdcQqIByROAQy39oRg0IZuqUu6CYW9UJXm6i7OlBKBOVg0lXi8EM2I6vp7o-2FZMIvt=
+8YMFKLobo-2BLQAqOwufF9KGVyJ18p3zhfLuo8-2BV6eDmTyec053VckCYuaTyz154TBv8DH9jv=
+BLpnP8-3D )
+
+
+
+*******************************************
+Confessions of a Budget Nerd (Watch/Listen)
+*******************************************
+
+In one of our most popular Budget Nerds episodes as of late,
+Ben and Ernie confess their deepest, darkest budgeting habits.
+Ben tries to stop the gas pump to the next dollar in a self-made
+game to put a clean number in YNAB. If Ernie=E2=80=99s had a tough day,
+he relaxes with budgeting instead of watching Netflix. We share
+more, plus some from our listeners!
+
+You are Not Alone  =20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtU-2FJyFpg7ZzPOsq9EMTcXHQfQITUFNKLzdkNkbvHLw483WVr_4juuG5DfhRl7CTJQ8ZIO5wR=
+sm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2Ila=
+Zv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadw=
+iSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-=
+2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM=
+2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6=
+-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbI=
+oS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07=
+irsKFMClY8GP2uJ3n52VEF4hcay-2F-2BKfPgBtW95zNB8BDTrBMy6K5rIlIoGAezBuvYuXAEWP=
+CG2GjhHWCx5RFjSa7zuo3sb7BIz5gRJsmI6GaNIthtFaBxZhet4JjQT9Llgbv9rr-2BE5dbbnEh=
+BdVYmYh-2FLX8ToDZDLeWC5NdcJf5x0-3D )                   =20
+
+Listen to the episode ( https://ablink.news.youneedabudget.com/ls/click?upn=
+=3DNhIKhDEsR0bRyNblP9iYtYLIr0TnO-2BmRWoYuM6NL301bG5yFOMljpF5PVclznBUBlbdzlK=
+iObL5ZL76QOEK7EcRfkNNrX0naYfjwZSATt7zxlLcnUqbXhOyA5qkSxLOY0V0w_4juuG5DfhRl7=
+CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoe=
+uzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfX=
+a4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttu=
+AVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7l=
+GnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b=
+65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsK=
+K8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXA=
+loJCOCVLb07irsKFMClY8GP2uJ3n52VEF4k5mLNGooCfGwkmzoj3n5oRtSOOCLRz1NDo2xK-2Bt=
+E-2B7fzHDoODBYiaOFtQ5iN8SE3CBbgZcVfAZPaqz8icgXQwvwLm5ji0TN4Y2KM3DICilLNtCVf=
+aSYwu3-2FdW2LmsNrHfVTMfy9bh-2Fy9ajHGHdfBAk-3D ) instead!
+
+
+
+****************************
+Is All Debt Bad Debt? (Read)
+****************************
+
+You=E2=80=99ve heard of good debt and bad debt, right? It=E2=80=99s a
+mixologist=E2=80=99s potion of interest rates, earning potential, and
+some highfalutin morality tossed in there. Jesse talks about
+why he thinks all debt is just downright lousy, and four reasons
+why. This isn=E2=80=99t an argument from a moral high ground, but he does
+lay out a compelling argument about how debt can be a bad guy in
+our budget if we let it.
+
+Debtie Downer   =20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtTEcFT8hfo5otvD-2BhE3ylbCtl8czZlbXTnVDUB1uh-2BkfajqjkvvmCqjDqHZ8lwvev-2Fqd=
+ijBL5FBS4S2BwtNeQO7bz5YGRNEKyHf87y-2BwnmWlLUhOLMoliHOfrGCrGftD8kxu3f4-2BzZm=
+-2FosYaaW9aW05lURdCCaOHXAec9OpqT-2F8SmTMeys55Kuqog9XFxpAHCnrEXk-2BdiW-2BRQH=
+DK0uTpELg-3Doksh_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwW=
+sJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR=
+7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94=
+g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9y=
+FhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvS=
+kbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4p=
+Q05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjC=
+MfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4nt5Uue18wv-2=
+B4PZ7DeBXYXlGOuWwPBdYrRqMiigQnks-2B07qcxnrBS9QwKuNNEfDlq8Zj32zOavO8qjTWoEWF=
+Nl3bK3iy6wLEI-2BGTIDfZ0lrYRm4L-2Fa62QKeU1qkYz65Y7c6z0q-2Boda1tjUPMIguDIcg-3=
+D )
+
+
+
+********************************************
+A How-Not-To: The Budget Confessional (Read)
+********************************************
+
+Have you ever bought a Starbucks gift card from the grocery
+store just so you could categorize it as =E2=80=9Cgroceries=E2=80=9D? Or
+categorized your manicure as =E2=80=9Cwellness=E2=80=9D? We asked our socia=
+l
+media followers to share the best of their bad budgeting behavior
+(and now you can stick their tricks up your sleeves, too!).
+Here=E2=80=99s a round-up of your best worst budget hacks, you rascally
+rabbits.
+
+Sneaky Budgeting  =20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtTEcFT8hfo5otvD-2BhE3ylbBb-2BZTXOzIWgP1IMvVs7pZphJN2DCAgoDq3jSnHBtWa2UTOjZ=
+kgPp-2BBsG9npgdbtxkAn8MKI1fSzM1BEnJIgUj2auaS-2FSkZwnJ7KyMkuYL-2BxA-3D-3DpWB=
+-_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4=
+h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be=
+-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxN=
+oa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd6=
+9lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2F=
+hFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxb=
+TrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzq=
+M20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4vqd4E3BeCDbS82bSFk5eXouSXP8=
+AD5aHdSA5ViIp4nn1zMSh1WZJP51UpAWTGdVj9d-2FNOgVFH8P0v4SN4f09SgcCVY8Q-2FsoK09=
+-2Bh7ih1Ubo7kjJWo9eelmAsqb8pzZbnj6KpZc5zy3AXlo0L2AWiI8-3D
+
+
+
+*********************************************
+How to Budget Even When It=E2=80=99s Not Payday (GIF)
+*********************************************
+
+Feeling a hankering to have a lump of cash to budget but it=E2=80=99s
+not payday yet? Or maybe money just feels a little muddy in your
+current assignments. Use the =E2=80=9Creset assigned amounts=E2=80=9D optio=
+n to
+easily reallocate the money in all the categories you select.
+It=E2=80=99ll move the balances back up to =E2=80=9Cready to assign.=E2=80=
+=9D Whether you
+just put them in the same spot or divvy it up differently than
+before, it=E2=80=99s a strangely calming loop any way you take it.
+
+****************************************
+What We=E2=80=99re Reading/Watching/Listening To
+****************************************
+
+* The undersold benefits of staying put=20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtZKnMOayxsJp30SV9lScZqQ-2FX1mZjnpYqAKmh6d40Ppgy-2BRTk4VXyyfs7MR7ZoZjwg-3D-=
+3DrwGj_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1Pu=
+vkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97=
+X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0Sz=
+sMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0=
+CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9Fl=
+G4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEU=
+PHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-=
+2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4jGc1VDctng1I-2FOQPH8SZ=
+xbBiQ6GD20vYjs7XEEoDX7JJUpkxg8o1H5pGqyj4uyru4EGX-2B7Hsfy1L0u7f9T0h6ppSmlY07=
+-2F3N3EeR0HxI7CJMnJibwY2czr4Nm1FBFMFyozncCGPwmK764nHSUszs1A-3D )
+
+* What home prices will look like in 2023=20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+Ytaj3DAuIRokfO2aFE9-2FAz-2Fb-2Bh4bOu9O-2Be4dzK8iXp-2BAu2uJHZUG4UFdIzJ8uW3CB=
+o0RmE6sFJoyOOfU9UWO9aJbWUiZMLOaGSLLAKo-2FsRofIXpa4eJU43TwofGS2wOpoPSiFR60S7=
+sT1VHATonA1j8w-3DOz5D_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33n=
+SduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV=
+0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FA=
+fJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQt=
+msD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx=
+8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-=
+2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-=
+2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4libKpP1=
+UHW9NPIrMMfJo7H4ADiZ-2FAcf71gb-2BHXCMUxzjB4OAQRK0dxKl33cd3gDgvrC1xCKV-2B0kh=
+yJNHeDMSnFebzJG1Nzj4-2BkzOmqqGc-2BlrLPc9U7EsC-2BGwCkgrxP-2FS4wYzI3TaQJj-2FW=
+durn1Jb9w-3D ), according to Zillow's revised downward forecast
+
+* An item-by-item look at how much more expensive your groceries are=20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtTo4P6vxfmYfYzVu3xXwmVZdC623UWeL8EXSwxeMKvc672jq2tahEOgo8ja8Hjpi55GL9efefS=
+-2B1nT0PFMBrSAwMPbBODiCRwN7-2Bu7VVqxqe3p4dkdBtLzWg60Yd7jCwrSAE5WgJBXCIgGMtH=
+BKjecE-3DnKj-_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJr=
+NqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2=
+h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6E=
+xgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhk=
+TkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbN=
+DH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05=
+-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfX=
+xkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4h2a8MNz-2FT0XjP=
+wEctZW7eXEoxXcStIZT0QgpKBZOyqON8F39utB8OWZY4lV-2BsdzRvnRVg7v7GW7gDFIVDlIHQn=
+jrSDx6WM4AYQCOoWxm92ybHKaKonBCrZX97XjKDeVzOSOy-2BGirUvRNY5G8NpdNN0-3D ),
+due to inflation
+
+* The student loan paaaauuuuuse=20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtZqvcfQv7W-2BAGhMEDV33Uu0-2BT36y3edJTkqOerYIPt0eTeHZ1hO5QFQXIHFPxXxzfafLFa=
+JtFwHmfN7fii8iANBMU4gDQaAHHRJQR5clWSAQ6M_D_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nm=
+ybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jL=
+f0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIk=
+y-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2F=
+smp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO=
+-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fq=
+p4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1P=
+ZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY=
+8GP2uJ3n52VEF4sOLAgqCX6zVb72cfB13jVSKGJl-2BU5GfL-2BmX78nG3xlXcYsD3ScWhoKcpg=
+iVGYGlsc53WUzxtDD6yKszBWuKm6-2Frs5muU5OFgABt4EyFOvipFY8O1D8sXikkkYmPap-2FWl=
+EeRCUYM8VbvxJZbEUIE4As-3D ) from Planet Money
+
+* Cash stuffing videos=20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtTKKEgfwAcOAqtjgNe5vl0kw8dNVH4FGrSIxwGBcDyu1RF1MDNEyqKftOJ1Z09Up8ya6kcMCVV=
+MRY6lXriC1UFdFnNTXpJEN8kyzgvET-2FDCx7BsHu4BU8QOMf09HVXbBFp8CF56XV6SUJTVsRdb=
+9rlCuXPN-2BBqNSMuKJt-2FPsKmwknnad_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2=
+FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkY=
+xmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4=
+iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YB=
+GikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53=
+YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7g=
+iA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-=
+2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n5=
+2VEF4oq3swlxbLpn54OaTLGGS9IgOz0BdsPU-2FUbOa1DiNIm0BhSUukAPeBYnPer-2BOU2qBXY=
+09e0Z8T-2F0RK8YOtKg-2F-2FhApLeR5L6JFMrOBVPw7epIRFXIzuxoXvkGEH6cW8qlml4u-2BT=
+vvUWKPSj8uVE-2BRuOw-3D )
+
+
+Quiz answer: Cash stuffing=20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtT1N6bSqNt6RBOnHWw5AxTzpAgcF8EZaNTlCZK1QEhqBQGWthcJjNbVpdmpGFSgtrAM-2BavxF=
+t-2BWW3-2Fw05vlI3IhlVLaanGL2HAtRy9a7ugok7T-2F4OZYBKAobdC5KKSu8d5Agd1pjnUitL=
+sNxWygL73E-3DUm_Q_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduw=
+WsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOC=
+R7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx9=
+4g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9=
+yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtv=
+SkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4=
+pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2Byj=
+CMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4gTuh3atQl6F=
+yDoJ-2F8almZXOm17sO-2F8wRmU-2BXakj8pSAyL5X0vGKJ35f0VM1lz6uQuEucOvF-2FEYvuxt=
+AbwsrUCNsqNb5EIqi6LXcn5uhnq3Ew1aoBvIGr9zxHcWVii3JLOk8x25-2FBFMmAcnIfVGsgEI-=
+3D )
+ videos feature colorful, personalized cash binders with
+compartments labeled for different categories=E2=80=94such as rent, food,
+saving, and sinking funds. If it sounds a lot like envelope
+budgeting, it is! Here=E2=80=99s a TikTok trend we can get behind!! And
+it=E2=80=99s one way young people are fighting inflation. Friends with a
+cash-stuffing Gen-Zer? Please, please, do them and you a favor.
+C=E2=80=99mon. Tell them about YNAB. We=E2=80=99re just as colorful, and wa=
+y more
+convenient.
+
+Like what you're reading? Share with a friend!=20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtTEcFT8hfo5otvD-2BhE3ylbBckorE2tJsUwhXLKJS-2Bw4efErFgBIv07CtqCoAxLbrog-3D-=
+3Dw3Lg_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1Pu=
+vkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97=
+X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0Sz=
+sMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0=
+CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9Fl=
+G4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEU=
+PHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-=
+2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4q95eZUmMs2erFdP4LI8-2B=
+cxzt-2Fdi33t7mz4m441zKG0knUtu6IAvuD3ZeLJreSmsjrhRHsuZi-2BLNqocQt6CyU6A2YOiG=
+gZC5jDj0y4TGbltrlr-2BvA1ouOKeYmsI9akDjX1Xd6xW-2Bf8mwW20UuwXM11w-3D )
+
+
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+Ytf9iu49tIOfYhYqsEu1M7Dc-2BTyv7w0tGAbBrSrNrBSiK2YPb_4juuG5DfhRl7CTJQ8ZIO5wR=
+sm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2Ila=
+Zv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadw=
+iSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-=
+2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM=
+2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6=
+-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbI=
+oS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07=
+irsKFMClY8GP2uJ3n52VEF4gt96qdPWD9K3EPDe6Qp6S-2Falhw6MTjS2BVJ8IQOmcSNrLVv4-2=
+F6-2BTGea2JiHQnzmN60E-2BNJu02izkeuk55kRxj-2BHCKCUC-2Fgzqr5C6ko81pjoIAGpKs-2=
+FhQIcihIiPsrtrXgvI-2BgwJAsoXGM0rT4Ffwrw-3D )                            =20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtQ-2FNvTGrGSD1kjWvFOxn9oOANkCiu4T-2Fn86zBXT1D5cR0oGA_4juuG5DfhRl7CTJQ8ZIO5=
+wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2I=
+laZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqa=
+dwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fm=
+r-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfH=
+dM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nw=
+n6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFG=
+bIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb=
+07irsKFMClY8GP2uJ3n52VEF4ljt34xZAoxAXHtAjzMwToobEaBzSV0gyY-2FoX7wOx9o9qbNtl=
+Mf-2B8mHflK-2B55K-2BIKUVLupJO2lXJ0Ljr1SNeoiQHJ-2BT44AlUPJqGBK4jU69bjK2l3SsO=
+JsAJgG73zbituPZrojJUG17BSag2-2BsorWho-3D )                            =20
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtSBJmRQOqycEE8UkEBpnCXeNiY38mLPdxeNTY9MxTx-2F3I6rAAF6wUwTxLMxbZ3-2BxtQ-3D-=
+3DK2wM_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1Pu=
+vkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97=
+X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0Sz=
+sMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0=
+CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9Fl=
+G4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEU=
+PHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-=
+2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4mI8fbseHo3BnUp-2FUNbzm=
+XdkzOj-2FmWwHpbB32iyivd-2FnXfcyXCY-2FcE7ocF2xY79fhEsQyGU-2Bs4Vyw8quF3uSb7N3=
+FlS-2BSZHIjAC-2Bil2HLJfxsOmVwSb91Q5e4ZxZLKzrBQfhARppZpkm7M05IceKLAk-3D )
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtTKKEgfwAcOAqtjgNe5vl0lCs58ekIrdrBG-2BlKlhPSJI4bw8_4juuG5DfhRl7CTJQ8ZIO5wR=
+sm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2Ila=
+Zv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadw=
+iSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-=
+2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM=
+2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6=
+-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbI=
+oS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07=
+irsKFMClY8GP2uJ3n52VEF4j7StgjIzhcsCniWpc-2Bmyp-2B1yB-2FDZw6gutmhkfaL7l-2F8-=
+2BrbtQZj343NG-2FYh9OMQ1l68vxRRVcRXz7IPU-2BjK-2FrC44zaPhJN-2BuoT7IzYdMuoufOA=
+KGylz5a2q-2BU3h-2BJg70J1B7JCPcqX51olQAvZtljRw-3D )
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtVqG8mKbnmOzyTeOy5CT4Mc9e-2Bkt0JW3m-2BLTTcUMUwnh8mceUs7YDgO26ce5TyQTMA-3D-=
+3DvcdQ_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1Pu=
+vkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97=
+X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0Sz=
+sMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0=
+CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9Fl=
+G4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEU=
+PHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-=
+2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4k60m4tUuvXcmq4aot0zWpi=
+j1ksZFwJs143o4U3YH9TGppU84-2FVsix26OerKErlIuJqh-2F5UlHjm8Gj-2F4-2Bww2SSVbZ-=
+2BjIpCxBlusxOp-2BqClHA56cDg-2Bem5CFrFXsAuHQX9Ek47O3Z0l8E-2F4XThwuRuGc-3D )
+( https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9i=
+YtYLIr0TnO-2BmRWoYuM6NL30211gWdZEspvw1BWTXXOtk8PCkKL-2B0-2F-2F-2Fg9CTi2feiH=
+8vqZHdfwXWGTblqPUBKisYJOUXWu5jLasgRcD9ZD1Nq-2Fn1OX_4juuG5DfhRl7CTJQ8ZIO5wRs=
+m9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZ=
+v5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwi=
+SnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2=
+BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2=
+T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-=
+2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIo=
+S7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07i=
+rsKFMClY8GP2uJ3n52VEF4rGDZ9J8gdS-2FMbx3yZxQKOpq5LTH83dqZUNgVKXYbcdXLrGpreN0=
+SPUggThLPohlZtKWk7KMCtfS5YcRlhrtriFARfgSIarm6usZTlpxdqCENhxc3DyvFYjZnNcYQSm=
+Bcj-2BznSlFe3wBuPRjV0x5l60-3D )
+
+Copyright =C2=A9 2022, You Need A Budget, All rights reserved.
+We only want you to receive this awesome, short, informative
+(and occasionally hilarious) newsletter if you opted in. If you
+change your mind, let us know!
+
+Our mailing address is:
+You Need A Budget
+770 E. Main St., #236
+Lehi, UT 84043
+
+subscribe to this list ( https://ablink.news.youneedabudget.com/ls/click?up=
+n=3DNhIKhDEsR0bRyNblP9iYtTEcFT8hfo5otvD-2BhE3ylbBckorE2tJsUwhXLKJS-2Bw4efEr=
+FgBIv07CtqCoAxLbrog-3D-3DwZPr_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk=
+9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUO=
+rDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba=
+1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZ=
+a9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53Ydzu=
+vVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0B=
+BJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2Bgy=
+lbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF=
+4s1hdw9oH1naeb8E7IvLR0-2BPFFqxAog349R-2BYEWxhgInDWLT7PjA6yNZaz3pJKiMs8OGOEa=
+AD1ijgA2-2BzKG0O-2FQ3nULsmYD65UgoStvJM86DjLJW5XscpcAQnchy9X69Ihvr6-2FnT0sIA=
+TZ-2FIg4AuCg8-3D )
+
+unsubscribe from this list ( https://ablink.news.youneedabudget.com/ls/clic=
+k?upn=3DNhIKhDEsR0bRyNblP9iYtdMU6Av-2BjJ-2Btey9JD4swgiMmmqSdbY5e3lq8ky5aS5K=
+6IJQUj7u7Ax-2F7r8D5HHne5-2FgBdLRcf8IxT6F9WG4pRMItUzP4AqiTOBmklZomRZJ-2FV2-2=
+Bq0Bpy2pySFnD6mob4VIHIAz5yaG-2ForfBd0w-2BUfOFNpXvIwh6e-2F13SMod6oitPV49KwOQ=
+YhkozRG8JnLCHnVHbDK3cboRV1EW2ij5FhCS4cAsIjaLYuu72yaNbfFNV7MdEpyTHo3-2FMO7Dr=
+BJbyNo9Tp5sOyzQ4MU38CYKvtGyaHhOdpaBqycfXlLMy0PnbJLMeZYwG6mLqkosvggNOd-2Fyl5=
+Vk4PvOBUMod0Nj1aKzRgxXQQpE1R8J81nywZVzvi6coPORzrJXYt-2BTsSj6gKEoSsPz2tddVAl=
+7aGi-2FqFunuEauO8ZUMuzg9AwrjMIognGeYmqI5fDMk7F6-2Bi26szy8xbY5iztZNmIW-2FF3-=
+2BIdoiTZuStk-2BIu9n4XDdNtS8uePZcSBGKnG-2B-2FWJ2A7-2FMRXVJaH9XtiL6RgxACYJt4d=
+2cCGYoaDlGvjvzPFOl4yk4-2FLlQzrkOazcHBdhrDtyqzcNw-3D-3D5cMF_4juuG5DfhRl7CTJQ=
+8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzET=
+TFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7=
+cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkh=
+I-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY=
+0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R9=
+3k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4=
+ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJC=
+OCVLb07irsKFMClY8GP2uJ3n52VEF4lAfqJ7aWGbxHZNB8zXOThCsOz1NfjSJj1oSx8iYcWikAk=
+zOLvuUOZbRnDYj6buWvfHgRM77rMwqruSTXoSSbu7bPtSIBDuuejb0IIa5DzsLNpradOKh3dC6b=
+NOOAAnd8SAxB4CYMVlfjgv-2F9hfiaJo-3D )
+--204351a044f636e2e1929753438680e712832cbc0030ff7716b4688337a7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:schemas-microso=
+ft-com:office:office" xmlns:v=3D"urn:schemas-microsoft-com:vml">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<!-- NAME: 1 COLUMN - FULL WIDTH --><!--[if gte mso 15]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]--><meta charset=3D"UTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+>
+	<title>YNAB Weekly Roundup</title>
+=09
+<style>img {
+border: 0; height: auto; text-decoration: none;
+}
+body {
+height: 100%; margin: 0; padding: 0; width: 100%;
+}
+img {
+-ms-interpolation-mode: bicubic;
+}
+.ReadMsgBody {
+width: 100%;
+}
+.ExternalClass {
+width: 100%;
+}
+body {
+-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+}
+.ExternalClass {
+line-height: 100%;
+}
+body {
+background-color: #FFFFFF;
+}
+@media only screen and (min-width:768px) {
+  .templateContainer {
+    width: 600px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body {
+    -webkit-text-size-adjust: none !important;
+  }
+  table {
+    -webkit-text-size-adjust: none !important;
+  }
+  td {
+    -webkit-text-size-adjust: none !important;
+  }
+  p {
+    -webkit-text-size-adjust: none !important;
+  }
+  a {
+    -webkit-text-size-adjust: none !important;
+  }
+  li {
+    -webkit-text-size-adjust: none !important;
+  }
+  blockquote {
+    -webkit-text-size-adjust: none !important;
+  }
+  body {
+    width: 100% !important; min-width: 100% !important;
+  }
+  #bodyCell {
+    padding-top: 10px !important;
+  }
+  .mcnRetinaImage {
+    max-width: 100% !important;
+  }
+  .mcnImage {
+    width: 100% !important;
+  }
+  .mcnCartContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnCaptionTopContent {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnRecContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnCaptionBottomContent {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnTextContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnBoxedTextContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnImageGroupContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnCaptionLeftTextContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnCaptionRightTextContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnCaptionLeftImageContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnCaptionRightImageContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnImageCardLeftTextContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnImageCardRightTextContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnImageCardLeftImageContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnImageCardRightImageContentContainer {
+    max-width: 100% !important; width: 100% !important;
+  }
+  .mcnBoxedTextContentContainer {
+    min-width: 100% !important;
+  }
+  .mcnImageGroupContent {
+    padding: 9px !important;
+  }
+  .mcnCaptionLeftContentOuter .mcnTextContent {
+    padding-top: 9px !important;
+  }
+  .mcnCaptionRightContentOuter .mcnTextContent {
+    padding-top: 9px !important;
+  }
+  .mcnImageCardTopImageContent {
+    padding-top: 18px !important;
+  }
+  .mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent {
+    padding-top: 18px !important;
+  }
+  .mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent {
+    padding-top: 18px !important;
+  }
+  .mcnImageCardBottomImageContent {
+    padding-bottom: 9px !important;
+  }
+  .mcnImageGroupBlockInner {
+    padding-top: 0 !important; padding-bottom: 0 !important;
+  }
+  .mcnImageGroupBlockOuter {
+    padding-top: 9px !important; padding-bottom: 9px !important;
+  }
+  .mcnTextContent {
+    padding-right: 18px !important; padding-left: 18px !important;
+  }
+  .mcnBoxedTextContentColumn {
+    padding-right: 18px !important; padding-left: 18px !important;
+  }
+  .mcnImageCardLeftImageContent {
+    padding-right: 18px !important; padding-bottom: 0 !important; padding-l=
+eft: 18px !important;
+  }
+  .mcnImageCardRightImageContent {
+    padding-right: 18px !important; padding-bottom: 0 !important; padding-l=
+eft: 18px !important;
+  }
+  .mcpreview-image-uploader {
+    display: none !important; width: 100% !important;
+  }
+  h1 {
+    font-size: 22px !important; line-height: 125% !important;
+  }
+  h2 {
+    font-size: 20px !important; line-height: 125% !important;
+  }
+  h3 {
+    font-size: 18px !important; line-height: 125% !important;
+  }
+  h4 {
+    font-size: 16px !important; line-height: 150% !important;
+  }
+  .mcnBoxedTextContentContainer .mcnTextContent {
+    font-size: 14px !important; line-height: 150% !important;
+  }
+  .mcnBoxedTextContentContainer .mcnTextContent p {
+    font-size: 14px !important; line-height: 150% !important;
+  }
+  #templatePreheader {
+    display: block !important;
+  }
+  #templatePreheader .mcnTextContent {
+    font-size: 14px !important; line-height: 150% !important;
+  }
+  #templatePreheader .mcnTextContent p {
+    font-size: 14px !important; line-height: 150% !important;
+  }
+  #templateHeader .mcnTextContent {
+    font-size: 16px !important; line-height: 150% !important;
+  }
+  #templateHeader .mcnTextContent p {
+    font-size: 16px !important; line-height: 150% !important;
+  }
+  #templateBody .mcnTextContent {
+    font-size: 16px !important; line-height: 150% !important;
+  }
+  #templateBody .mcnTextContent p {
+    font-size: 16px !important; line-height: 150% !important;
+  }
+  #templateFooter .mcnTextContent {
+    font-size: 14px !important; line-height: 150% !important;
+  }
+  #templateFooter .mcnTextContent p {
+    font-size: 14px !important; line-height: 150% !important;
+  }
+}
+</style>
+</head>
+<body style=3D"height: 100%; width: 100%; -ms-text-size-adjust: 100%; -webk=
+it-text-size-adjust: 100%; margin: 0; padding: 0;" bgcolor=3D"#FFFFFF">
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">Plus, is all debt bad debt?  <div style=3D"display: non=
+e; max-height: 0px; overflow: hidden;">
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;
+</div>
+</div>
+<center>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" he=
+ight=3D"100%" id=3D"bodyTable" style=3D"border-collapse: collapse; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-t=
+ext-size-adjust: 100%; height: 100%; width: 100%; margin: 0; padding: 0;" w=
+idth=3D"100%" bgcolor=3D"#FFFFFF">
+	<tbody>
+		<tr>
+			<td align=3D"center" id=3D"bodyCell" style=3D"mso-line-height-rule: exac=
+tly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; height: 10=
+0%; width: 100%; border-top-width: 0; margin: 0; padding: 0;" valign=3D"top=
+">
+<!-- BEGIN TEMPLATE // -->
+			<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-=
+collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-=
+size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=3D"100%">
+				<tbody>
+					<tr>
+						<td align=3D"center" id=3D"templatePreheader" style=3D"mso-line-heigh=
+t-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%=
+; border-top-width: 0; border-bottom-width: 0; padding-top: 0px; padding-bo=
+ttom: 5px; background: none no-repeat center / cover;" valign=3D"top" bgcol=
+or=3D"#85C3E9">
+<!--[if (gte mso 9)|(IE)]>
+<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" wi=
+dth=3D"600" style=3D"width:600px;">
+<tr>
+<td align=3D"center" valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+						<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"templateContainer" style=3D"border-collapse: collapse; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-=
+text-size-adjust: 100%; max-width: 600px !important;" width=3D"100%">
+							<tbody>
+								<tr>
+									<td class=3D"preheaderContainer" style=3D"mso-line-height-rule: ex=
+actly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=
+=3D"top"></td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+					</tr>
+					<tr>
+						<td align=3D"center" id=3D"templateHeader" style=3D"mso-line-height-r=
+ule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; b=
+order-top-width: 0; border-bottom-width: 0; padding-top: 0px; padding-botto=
+m: 0px; background: none no-repeat center / cover;" valign=3D"top" bgcolor=
+=3D"#85C3E9">
+<!--[if (gte mso 9)|(IE)]>
+<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" wi=
+dth=3D"600" style=3D"width:600px;">
+<tr>
+<td align=3D"center" valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+						<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"templateContainer" style=3D"border-collapse: collapse; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-=
+text-size-adjust: 100%; max-width: 600px !important;" width=3D"100%">
+							<tbody>
+								<tr>
+									<td class=3D"headerContainer" style=3D"mso-line-height-rule: exact=
+ly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=3D"=
+top"></td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+					</tr>
+					<tr>
+						<td align=3D"center" id=3D"templateBody" style=3D"mso-line-height-rul=
+e: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; bor=
+der-top-width: 0; border-bottom-width: 0; padding-top: 9px; padding-bottom:=
+ 50px; background: none no-repeat center / cover;" valign=3D"top" bgcolor=
+=3D"#ffffff">
+<!--[if (gte mso 9)|(IE)]>
+<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" wi=
+dth=3D"600" style=3D"width:600px;">
+<tr>
+<td align=3D"center" valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+						<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"templateContainer" style=3D"border-collapse: collapse; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-=
+text-size-adjust: 100%; max-width: 600px !important;" width=3D"100%">
+							<tbody>
+								<tr>
+									<td class=3D"bodyContainer" style=3D"mso-line-height-rule: exactly=
+; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=3D"to=
+p">
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnImageBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-t=
+ext-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnImageBlockOuter">
+											<tr>
+												<td class=3D"mcnImageBlockInner" style=3D"mso-line-height-rule:=
+ exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; paddi=
+ng: 9px;" valign=3D"top">
+												<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"mcnImageContentContainer" style=3D"min-width: 100%; border=
+-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text=
+-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td class=3D"mcnImageContent" style=3D"mso-line-height-rule:=
+ exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; paddi=
+ng: 0 9px;" valign=3D"top" align=3D"center"><a href=3D"https://ablink.news.=
+youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtTEcFT8hfo5otvD-2BhE3=
+ylbDQCxYzsfnHgTxULBzBcz0WtL24e4awIAxlng7IyXsBMkOCSulUlD9WBeDsNZVAsdO4uJ3bRh=
+sG-2B-2Bi0XEuUlNevTxxbZGwvlF-2FU76Xls3CIHS5XOt2DGKriO0DwaHoO-2FT18BsBfknjX5=
+TDtj7TV-2BXuyVYjB_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduw=
+WsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOC=
+R7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx9=
+4g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9=
+yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtv=
+SkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4=
+pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2Byj=
+CMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4oRW6haPQnk5=
+M3IXfTfOsDvouWuICctA4UTryftvQ1EDrPmn58oVrMeGBlTucDmp5a7FEI-2Bwv-2FSgxABJVgh=
+NjSSjw1tmuuna9Ap6nwpExAWUxi2cZgOsAs5cyRygXSDL-2BEQSz4ljb-2FML09hlNTPCmoQ-3D=
+" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webk=
+it-text-size-adjust: 100%;" target=3D"_blank"><img align=3D"center" alt=3D"=
+YNAB Weekly Roundup" class=3D"mcnImage" src=3D"https://braze-images.com/app=
+boy/communication/assets/image_assets/images/61e83f0535074721bbb605cc/origi=
+nal.gif?1642610437" style=3D"max-width: 600px; padding-bottom: 0px; vertica=
+l-align: bottom; outline: none; text-decoration: none; display: inline !imp=
+ortant; width: 564px; height: auto; -ms-interpolation-mode: bicubic; border=
+: 0px;"></a></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnDividerBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%; table-layout: fixed !important;" width=3D"100%">
+										<tbody class=3D"mcnDividerBlockOuter">
+											<tr>
+												<td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%; ms=
+o-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-=
+adjust: 100%; padding: 10px 18px;">
+												<!-- <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"mcnDividerContent" style=3D"min-width: 100%;border-top: 2px solid #E=
+AEAEA;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt=
+;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width=3D"100%"=
+>
+													<tbody>
+														<tr>
+															<td style=3D"mso-line-height-rule: exactly;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;"></td>
+														</tr>
+													</tbody>
+												</table> -->
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnTextBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-te=
+xt-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnTextBlockOuter">
+											<tr>
+												<td class=3D"mcnTextBlockInner" style=3D"padding-top: 1px; mso-=
+line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;" valign=3D"top">
+<!--[if mso]>
+<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" widt=
+h=3D"100%" style=3D"width:100%;">
+<tr>
+<![endif]--><!--[if mso]>
+<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+												<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"mcnTextContentContainer" style=3D"max-width: 100%; min-wid=
+th: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspac=
+e: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=
+=3D"100%">
+													<tbody>
+														<tr>
+															<td class=3D"mcnTextContent" style=3D"color: #3498db; mso-li=
+ne-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%; word-break: break-word; font-family: Helvetica; font-size: 16px; =
+line-height: 150%; padding: 0px 18px 9px;" valign=3D"top" align=3D"left">
+															<div style=3D"" align=3D"center">
+<span style=3D"font-size: 18px;"><b>Confessions of a Budget Nerd</b></span>=
+<br>
+															<span style=3D"font-size: 18px;"><b>=E2=80=94 May 9, 2022 =
+=E2=80=94</b></span>
+</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+</tr>
+</table>
+<![endif]-->
+</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnDividerBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%; table-layout: fixed !important;" width=3D"100%">
+										<tbody class=3D"mcnDividerBlockOuter">
+											<tr>
+												<td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%; ms=
+o-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-=
+adjust: 100%; padding: 10px 18px 35px;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"mcnDividerContent" style=3D"min-width: 100%; border-top-width: 2px; bor=
+der-top-color: #EAEAEA; border-top-style: solid; border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td style=3D"mso-line-height-rule: exactly; -ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%;"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnTextBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-te=
+xt-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnTextBlockOuter">
+											<tr>
+												<td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px; mso-=
+line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;" valign=3D"top">
+<!--[if mso]>
+<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" widt=
+h=3D"100%" style=3D"width:100%;">
+<tr>
+<![endif]--><!--[if mso]>
+<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+												<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"mcnTextContentContainer" style=3D"max-width: 100%; min-wid=
+th: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspac=
+e: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=
+=3D"100%">
+													<tbody>
+														<tr>
+															<td class=3D"mcnTextContent" style=3D"mso-line-height-rule: =
+exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; word-b=
+reak: break-word; color: #202020; font-family: Helvetica; font-size: 16px; =
+line-height: 150%; padding: 0 18px 9px;" valign=3D"top" align=3D"left">Hell=
+o, and welcome to the Weekly Roundup, YNABers! Have you ever danced when yo=
+ur reconciliation matches up to the penny? Do you sometimes just scroll, sc=
+roll, scroll through your budget because it=E2=80=99s relaxing? You=E2=80=
+=99re not the only one. Today we=E2=80=99re sharing budget confessions from=
+ Ben and Ernie, and from you, our community. Plus we look at the age-old go=
+od debt/bad debt question and give you a tip on how to budget dollars even =
+when it=E2=80=99s not payday. <br>
+															<br>
+															<b>Quiz question:</b> =E2=80=9CCash Stuffing=E2=80=9D is a p=
+opular topic on TikTok. If you saw one of these #cashstuffing videos, what =
+would you be watching?=09
+												<ul>
+																<li style=3D"mso-line-height-rule: exactly; -ms-text-size-a=
+djust: 100%; -webkit-text-size-adjust: 100%;">Someone taking out an endless=
+ stream of bills from their pocket</li>
+																<li style=3D"mso-line-height-rule: exactly; -ms-text-size-a=
+djust: 100%; -webkit-text-size-adjust: 100%;">A Build-a-Bear=C2=AE being st=
+uffed with cash</li>
+																<li style=3D"mso-line-height-rule: exactly; -ms-text-size-a=
+djust: 100%; -webkit-text-size-adjust: 100%;">Turkey stuffing being made wi=
+th paper money cubes</li>
+																<li style=3D"mso-line-height-rule: exactly; -ms-text-size-a=
+djust: 100%; -webkit-text-size-adjust: 100%;">Someone tucking money into pl=
+astic envelopes in a binder</li>
+																</ul>
+
+															(Answer at the bottom)<br>
+															<br>
+															<b>Dive in:</b>
+                      	<ul>
+																<li dir=3D"ltr" style=3D"color: #4495d7; mso-line-height-ru=
+le: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+																<p dir=3D"ltr" role=3D"presentation" style=3D"mso-line-heig=
+ht-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100=
+%; color: #202020; font-family: Helvetica; font-size: 16px; line-height: 15=
+0%; margin: 10px 0; padding: 0;" align=3D"left"><b id=3D"docs-internal-guid=
+-44226456-7fff-6088-7829-d06b749e2f80"><a href=3D"https://ablink.news.youne=
+edabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtU-2FJyFpg7ZzPOsq9EMTcXHQf=
+QITUFNKLzdkNkbvHLw48GuQL_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs=
+33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaq=
+uSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-=
+2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLW=
+UQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYE=
+Cyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKD=
+Zr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO=
+2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4th0R=
+LSg2XTY9HckSHLbw6eh2D5682S0jpmJPUzyOuaBIVhImqzQmXtg09l3k5n1SqBjNyZKrdjtF1E9=
+kpkNQUaFs1vfbPvZ3aTta6XgrGqRg9FQT3FF0VwKpdjCNnF2o4DlbTfBiISvgE27oM-2F6j8Q-3=
+D" style=3D"font-weight: bold; mso-line-height-rule: exactly; -ms-text-size=
+-adjust: 100%; -webkit-text-size-adjust: 100%; color: #4495D7; text-decorat=
+ion: underline;">Confessions of a Budget Nerd (Watch/Listen)</a></b></p>
+																</li>
+																<li dir=3D"ltr" style=3D"color: #4495d7; mso-line-height-ru=
+le: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+																<p dir=3D"ltr" role=3D"presentation" style=3D"mso-line-heig=
+ht-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100=
+%; color: #202020; font-family: Helvetica; font-size: 16px; line-height: 15=
+0%; margin: 10px 0; padding: 0;" align=3D"left"><b><a href=3D"https://ablin=
+k.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtTEcFT8hfo5otv=
+D-2BhE3ylbCtl8czZlbXTnVDUB1uh-2BkfajqjkvvmCqjDqHZ8lwvev-2FqdijBL5FBS4S2BwtN=
+eQO7bz5YGRNEKyHf87y-2BwnmWlLUhOLMoliHOfrGCrGftD8kxu3f4-2BzZm-2FosYaaW9aW05l=
+URdCCaOHXAec9OpqT-2F8SmTMeys55Kuqog9XFxpAHCnrEXk-2BdiW-2BRQHDK0uTpELg-3D5__=
+5_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4=
+h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be=
+-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxN=
+oa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd6=
+9lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2F=
+hFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxb=
+TrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzq=
+M20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4sGoGyyZmccNIU288Ap-2Fg73b-2=
+BQ3LdcT89gRnRdt72YTx6Zqq2HuAeh-2FSu0uR8SyHeJc98EEIQqVuLIdHS0dDf9Gsm-2B8b79R=
+pJfrPegJrzQV4PqBIRhzP3TxTSvvS-2BJLQSxdG06VUVUfWzhEpd7EJoBY-3D" style=3D"fon=
+t-weight: bold; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%; color: #4495D7; text-decoration: underline;=
+">Is All Debt Bad Debt? (Read)</a></b></p>
+																</li>
+																<li dir=3D"ltr" style=3D"color: #4495d7; mso-line-height-ru=
+le: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+																<p dir=3D"ltr" role=3D"presentation" style=3D"mso-line-heig=
+ht-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100=
+%; color: #202020; font-family: Helvetica; font-size: 16px; line-height: 15=
+0%; margin: 10px 0; padding: 0;" align=3D"left"><a href=3D"https://ablink.n=
+ews.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtTEcFT8hfo5otvD-2=
+BhE3ylbBb-2BZTXOzIWgP1IMvVs7pZphJN2DCAgoDq3jSnHBtWa2UTOjZkgPp-2BBsG9npgdbtx=
+kAn8MKI1fSzM1BEnJIgUj28HxEvarJGjXFB8ijQGed6Nf6pZ6rzL15gCSuWFA1xgbRDykfUmgR2=
+maWIPtQ8mKkLx2JbpO53GTg7hiCEcR6qmWbl41Z0kq-2B0d9Npz9fhNQHhC6-2Bu8Q6DRm-2Biw=
+D07BqLvIkk_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqF=
+s1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3S=
+rB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgV=
+y0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkC=
+zUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0=
+C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F=
+1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkA=
+YDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4lt8FwjpP4tQUKKYXf0=
+fYpQ6SarplyjFOvQdVpyp5Ry9DMXcrHvPNYzuwm5O37YIiS4Tb1emdKmDBxfpXBNXtnGCj4J2JF=
+J0DOU7-2F8XNaiNDdKiPnDG-2BkG8ERQokeG29aprvA5tXrVowrnS3sKRh-2FUA-3D" style=
+=3D"font-weight: bold; mso-line-height-rule: exactly; -ms-text-size-adjust:=
+ 100%; -webkit-text-size-adjust: 100%; color: #4495D7; text-decoration: und=
+erline;">A How-Not-To: The Budget Confessional (Read)</a></p>
+																</li>
+															</ul>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+</tr>
+</table>
+<![endif]-->
+</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnDividerBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%; table-layout: fixed !important;" width=3D"100%">
+										<tbody class=3D"mcnDividerBlockOuter">
+											<tr>
+												<td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%; ms=
+o-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-=
+adjust: 100%; padding: 35px 18px;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"mcnDividerContent" style=3D"min-width: 100%; border-top-width: 2px; bor=
+der-top-color: #EAEAEA; border-top-style: solid; border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" width=3D"100%">=20
+													<tbody>
+														<tr>
+															<td style=3D"mso-line-height-rule: exactly; -ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%;"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnImageCardBlock" style=3D"border-collapse: collapse; mso-table-lspace: 0pt=
+; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%;" width=3D"100%">
+										<tbody class=3D"mcnImageCardBlockOuter">
+											<tr>
+												<td class=3D"mcnImageCardBlockInner" style=3D"mso-line-height-r=
+ule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; p=
+adding: 9px 18px;" valign=3D"top">
+												<table align=3D"right" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" class=3D"mcnImageCardBottomContent" style=3D"border-collapse: coll=
+apse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 1=
+00%; -webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td align=3D"center" class=3D"mcnImageCardBottomImageContent=
+" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webk=
+it-text-size-adjust: 100%; padding: 0px 0px 0;" valign=3D"top"><a href=3D"h=
+ttps://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtU=
+-2FJyFpg7ZzPOsq9EMTcXHQfQITUFNKLzdkNkbvHLw48NUH1_4juuG5DfhRl7CTJQ8ZIO5wRsm9=
+lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5=
+ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSn=
+wX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BM=
+CUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T1=
+0mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2B=
+gB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7=
+qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irs=
+KFMClY8GP2uJ3n52VEF4qHCqxpb4y38GZ4v9yQjxUzZ2Hb9jhVESSipvDEawueoQHP5ULITzk7v=
+fib-2FD0ccI7P7Of59TFWhMBH8A656rNiLf2GrJyOlfDGIqEmLKkVFrNdUUOMFy7Tul7sc63d5f=
+H-2FEubIGmyIc41HKT8Mt5Oo-3D" style=3D"mso-line-height-rule: exactly; -ms-te=
+xt-size-adjust: 100%; -webkit-text-size-adjust: 100%;" target=3D"_blank"><i=
+mg alt=3D"Woman adding a new transaction to her category" class=3D"mcnImage=
+" src=3D"https://braze-images.com/appboy/communication/assets/image_assets/=
+images/626aff7af36e0703474d9700/original.jpg?1651179386" style=3D"max-width=
+: 620px; outline: none; text-decoration: none; vertical-align: bottom; widt=
+h: 564px; height: auto; -ms-interpolation-mode: bicubic; border: 0px;"> </a=
+></td>
+														</tr>
+														<tr>
+															<td class=3D"mcnTextContent" style=3D"color: #25384F; font-f=
+amily: Helvetica; font-size: 16px; font-weight: normal; line-height: 150%; =
+mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-siz=
+e-adjust: 100%; word-break: break-word; padding: 9px 18px;" valign=3D"top" =
+width=3D"546" align=3D"left"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnTextBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-te=
+xt-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnTextBlockOuter">
+											<tr>
+												<td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px; mso-=
+line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;" valign=3D"top">
+<!--[if mso]>
+<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" widt=
+h=3D"100%" style=3D"width:100%;">
+<tr>
+<![endif]--><!--[if mso]>
+<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+												<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"mcnTextContentContainer" style=3D"max-width: 100%; min-wid=
+th: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspac=
+e: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=
+=3D"100%">
+													<tbody>
+														<tr>
+															<td class=3D"mcnTextContent" style=3D"color: #25384F; mso-li=
+ne-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%; word-break: break-word; font-family: Helvetica; font-size: 16px; =
+line-height: 150%; padding: 0px 18px 9px;" valign=3D"top" align=3D"left">
+															<h1 font-family:helvetica=3D"" style=3D"display: block; colo=
+r: #202020; font-family: Helvetica; font-size: 26px; font-style: normal; fo=
+nt-weight: bold; line-height: 125%; letter-spacing: normal; margin: 0; padd=
+ing: 0;" align=3D"left"><span class=3D"mso-font-fix-arial"><font style=3D"c=
+olor: #3498db;"><span style=3D"font-size: 18px;"><strong>Confessions of a B=
+udget Nerd (Watch/Listen)</strong></span></font></span></h1>
+
+															<p style=3D"color: #25384f; font-family: Helvetica; font-siz=
+e: 16px; line-height: 150%; mso-line-height-rule: exactly; -ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%; margin: 10px 0px; padding: 0px;=
+" align=3D"left"><span class=3D"mso-font-fix-arial"> In one of our most pop=
+ular Budget Nerds episodes as of late, Ben and Ernie confess their deepest,=
+ darkest budgeting habits. Ben tries to stop the gas pump to the next dolla=
+r in a self-made game to put a clean number in YNAB. If Ernie=E2=80=99s had=
+ a tough day, he relaxes with budgeting instead of watching Netflix. We sha=
+re more, plus some from our listeners!</span></p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+							<table style=3D"border-collapse: collapse; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: =
+100%;">
+								<!-----------------------------><!-----------------BUTTON----------=
+----------------->
+										 <tr>
+												<td align=3D"center" style=3D"padding-bottom: 40px; mso-line-he=
+ight-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 1=
+00%;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%=
+;">
+													<tbody>
+														<tr>
+															<td width=3D"17" style=3D"mso-line-height-rule: exactly; -ms=
+-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">&nbsp;</td>
+															<td align=3D"center" style=3D"mso-line-height-rule: exactly;=
+ -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+														=09
+															<!--[if mso]>
+  <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:sch=
+emas-microsoft-com:office:word" href=3D"https://youtu.be/6Tg4aP6My50" style=
+=3D"height:44px;v-text-anchor:middle;width:250px;" arcsize=3D"7%" stroke=3D=
+"f" fill=3D"t">
+    <v:fill type=3D"tile" src=3D"" color=3D"#4495D7" />
+    <w:anchorlock/>
+    <center style=3D"color:#ffffff;font-family:'Lato', Helvetica, Arial,san=
+s-serif;font-size:13px;font-weight:bold;">You are Not Alone</center>
+  </v:roundrect>
+<![endif]-->
+
+<a class=3D"mobText mobBtn" href=3D"https://ablink.news.youneedabudget.com/=
+ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtU-2FJyFpg7ZzPOsq9EMTcXHQfQITUFNKLzdkNkb=
+vHLw486EaH_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqF=
+s1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3S=
+rB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgV=
+y0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkC=
+zUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0=
+C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F=
+1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkA=
+YDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4nFKVSfb2qUKysxYjFm=
+v8xuVcq-2Franu7L0uBeLngUrKW07AfW-2FGKNtaCTs-2FC1Y3nnVSeQ4djNDTBY353Z-2BIhQp=
+ywhNF-2Fz4vRQ57EuZU-2FbijlSJbXtscHtf4W9IdWfZZDdxPqJCMrzTOEFE5zojzzHGU-3D" s=
+tyle=3D"border-radius: 3px; color: #ffffff; display: inline-block; font-fam=
+ily: 'Lato', Helvetica, Arial,sans-serif; font-size: 15px; font-weight: bol=
+d; line-height: 44px; text-align: center; text-decoration: none; width: 240=
+px; -webkit-text-size-adjust: none; mso-hide: all; mso-line-height-rule: ex=
+actly; -ms-text-size-adjust: 100%; background: #4495D7 url();">You are Not =
+Alone</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+
+											<!---end of button --------------------------------->
+							</table>
+							<!------------SPECIAL LINE------------------------------->
+							<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"min=
+-width: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-r=
+space: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" wi=
+dth=3D"100%">
+<tbody>
+<tr>
+<td style=3D"padding-top: 9px; mso-line-height-rule: exactly; -ms-text-size=
+-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=3D"top">
+<!--[if mso]>
+<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" widt=
+h=3D"100%" style=3D"width:100%;"><tr>
+<![endif]-->
+<!--[if mso]><td valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"mcnTextContentContainer" style=3D"max-width: 100%; min-width: 100%; bo=
+rder-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-=
+text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=3D"100%"><tb=
+ody><tr><td class=3D"mcnTextContent" style=3D"color: #25384F; mso-line-heig=
+ht-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100=
+%; word-break: break-word; font-family: Helvetica; font-size: 16px; line-he=
+ight: 150%; padding: 0px 18px 9px;" valign=3D"top" align=3D"left">
+<p style=3D"color: #25384F; mso-line-height-rule: exactly; -ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%; font-family: Helvetica; font-si=
+ze: 16px; line-height: 150%; margin: 10px 0; padding: 0;" align=3D"left"><a=
+ href=3D"https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bR=
+yNblP9iYtYLIr0TnO-2BmRWoYuM6NL301bG5yFOMljpF5PVclznBUBlbdzlKiObL5ZL76QOEK7E=
+cRfkNNrX0naYfjwZSATt7zxlLcnUqbXhOyA5qkSxLOYhOX8_4juuG5DfhRl7CTJQ8ZIO5wRsm9l=
+Zj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5Z=
+uC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnw=
+X5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMC=
+Uy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10=
+mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2Bg=
+B-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7q=
+mCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsK=
+FMClY8GP2uJ3n52VEF4osomWnF2Dx5Kz0aGh7YrGC-2F7hKmc5Wf8qlClAdexPeC4us6YnbOWF1=
+xYJISWWvzgipIOT3wq35Az5k7u4hqD1pUF8cfLZTV2GKnFckn-2Bj8zsKbFbzAdwMkqcDtSTUkr=
+4OnRbV7S-2BdFDq03uvRkmHxk-3D" style=3D"mso-line-height-rule: exactly; -ms-t=
+ext-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #4495D7; font=
+-weight: normal; text-decoration: underline;"><em>Listen to the episode</em=
+></a> <em>instead!</em></p>
+</td></tr></tbody></table>
+<!---------------END SPECIAL LINE----------------------------->
+						=09
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnDividerBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%; table-layout: fixed !important;" width=3D"100%">
+										<tbody class=3D"mcnDividerBlockOuter">
+											<tr>
+												<td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%; ms=
+o-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-=
+adjust: 100%; padding: 35px 18px;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"mcnDividerContent" style=3D"min-width: 100%; border-top-width: 2px; bor=
+der-top-color: #EAEAEA; border-top-style: solid; border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td style=3D"mso-line-height-rule: exactly; -ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%;"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>=20
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnTextBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-te=
+xt-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnTextBlockOuter">
+											<tr>
+												<td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px; mso-=
+line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;" valign=3D"top">
+<!--[if mso]>
+<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" widt=
+h=3D"100%" style=3D"width:100%;">
+<tr>
+<![endif]--><!--[if mso]>
+<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+<!--[if mso]>
+</td>=20
+<![endif]--><!--[if mso]>
+</tr>
+</table>
+<![endif]-->
+</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnImageCardBlock" style=3D"border-collapse: collapse; mso-table-lspace: 0pt=
+; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%;" width=3D"100%">
+										<tbody class=3D"mcnImageCardBlockOuter">
+											<tr>
+												<td class=3D"mcnImageCardBlockInner" style=3D"mso-line-height-r=
+ule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; p=
+adding: 9px 18px;" valign=3D"top">
+												<table align=3D"right" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" class=3D"mcnImageCardBottomContent" style=3D"border-collapse: coll=
+apse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 1=
+00%; -webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td align=3D"center" class=3D"mcnImageCardBottomImageContent=
+" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webk=
+it-text-size-adjust: 100%; padding: 0px 0px 0;" valign=3D"top"><a href=3D"h=
+ttps://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtT=
+EcFT8hfo5otvD-2BhE3ylbCtl8czZlbXTnVDUB1uh-2BkfajqjkvvmCqjDqHZ8lwvev-2FqdijB=
+L5FBS4S2BwtNeQO7bz5YGRNEKyHf87y-2BwnmWlLUhOLMoliHOfrGCrGftD8kxu3f4-2BzZm-2F=
+osYaaW9aW05lURdCCaOHXAec9OpqT-2F8SmTMeys55Kuqog9XFxpAHCnrEXk-2BdiW-2BRQHDK0=
+uTpELg-3DTvgM_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJr=
+NqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2=
+h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6E=
+xgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhk=
+TkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbN=
+DH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05=
+-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfX=
+xkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4uDYG6VnGk4YI4Kh=
+ruUvREYFJrnvBtEw6sNSKGt8UZEy31g8ht0TwWrmjxkRWoTJpVK-2B7zbpslqK4NrDfswAhINGf=
+46nOiURqRoxTtt1erwYwlFwWvTXb-2Bbqh9ajICyTHVgoevtbJsoXfPwlPRW-2BTqA-3D" styl=
+e=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-tex=
+t-size-adjust: 100%;" target=3D"_blank"><img alt=3D"Man stressed out over d=
+ebt" class=3D"mcnImage" src=3D"https://braze-images.com/appboy/communicatio=
+n/assets/image_assets/images/626aff7e625af13d628e0b7e/original.png?16511793=
+90" style=3D"max-width: 620px; outline: none; text-decoration: none; vertic=
+al-align: bottom; width: 564px; height: auto; -ms-interpolation-mode: bicub=
+ic; border: 0px;"> </a></td>
+														</tr>
+														<tr>
+															<td class=3D"mcnTextContent" style=3D"color: #25384F; font-f=
+amily: Helvetica; font-size: 16px; font-weight: normal; line-height: 150%; =
+mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-siz=
+e-adjust: 100%; word-break: break-word; padding: 9px 18px;" valign=3D"top" =
+width=3D"546" align=3D"left"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnTextBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-te=
+xt-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnTextBlockOuter">
+											<tr>
+												<td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px; mso-=
+line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;" valign=3D"top">
+<!--[if mso]>
+<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" widt=
+h=3D"100%" style=3D"width:100%;">
+<tr>
+<![endif]--><!--[if mso]>
+<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+												<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"mcnTextContentContainer" style=3D"max-width: 100%; min-wid=
+th: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspac=
+e: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=
+=3D"100%">
+													<tbody>
+														<tr>
+															<td class=3D"mcnTextContent" style=3D"color: #25384F; mso-li=
+ne-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%; word-break: break-word; font-family: Helvetica; font-size: 16px; =
+line-height: 150%; padding: 0px 18px 9px;" valign=3D"top" align=3D"left">
+															<h1 style=3D"mso-line-height-rule: exactly; mso-text-raise: =
+-1px; color: #3498db; line-height: 24px; display: block; font-family: Helve=
+tica; font-size: 26px; font-style: normal; font-weight: bold; letter-spacin=
+g: normal; margin: 0px; padding: 0px;" align=3D"left"><span class=3D"mso-fo=
+nt-fix-arial"><font style=3D"color: #3498db;"><span style=3D"font-size: 18p=
+x;"><strong>Is All Debt Bad Debt? (Read)</strong></span></font></span></h1>
+
+															<p style=3D"color: #25384F; mso-line-height-rule: exactly; -=
+ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-family: Hel=
+vetica; font-size: 16px; line-height: 150%; margin: 10px 0; padding: 0;" al=
+ign=3D"left"><span class=3D"mso-font-fix-arial">You=E2=80=99ve heard of goo=
+d debt and bad debt, right? It=E2=80=99s a mixologist=E2=80=99s potion of i=
+nterest rates, earning potential, and some highfalutin morality tossed in t=
+here. Jesse talks about why he thinks all debt is just downright lousy, and=
+ four reasons why. This isn=E2=80=99t an argument from a moral high ground,=
+ but he does lay out a compelling argument about how debt can be a bad guy =
+in our budget if we let it.</span></p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+</tr>
+</table>
+<![endif]-->
+</td>
+
+											</tr>
+										</tbody>
+									</table>
+
+                  		<table style=3D"border-collapse: collapse; mso-table-ls=
+pace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-=
+size-adjust: 100%;">
+								<!-----------------------------><!-----------------BUTTON----------=
+----------------->
+										 <tr>
+												<td align=3D"center" style=3D"padding-bottom: 40px; mso-line-he=
+ight-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 1=
+00%;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%=
+;">
+													<tbody>
+														<tr>
+															<td width=3D"17" style=3D"mso-line-height-rule: exactly; -ms=
+-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">&nbsp;</td>
+															<td align=3D"center" style=3D"mso-line-height-rule: exactly;=
+ -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+														=09
+															<!--[if mso]>
+  <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:sch=
+emas-microsoft-com:office:word" href=3D"https://www.youneedabudget.com/4-re=
+asons-debt-is-bad-for-you/?utm_medium=3Demail&utm_source=3Dweekly_newslette=
+r&utm_campaign=3Dweekly_roundup&utm_content=3Dweekly_roundup_316" style=3D"=
+height:44px;v-text-anchor:middle;width:250px;" arcsize=3D"7%" stroke=3D"f" =
+fill=3D"t">
+    <v:fill type=3D"tile" src=3D"" color=3D"#4495D7" />
+    <w:anchorlock/>
+    <center style=3D"color:#ffffff;font-family:'Lato', Helvetica, Arial,san=
+s-serif;font-size:13px;font-weight:bold;">Debtie Downer</center>
+  </v:roundrect>
+<![endif]-->
+
+<a class=3D"mobText mobBtn" href=3D"https://ablink.news.youneedabudget.com/=
+ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtTEcFT8hfo5otvD-2BhE3ylbCtl8czZlbXTnVDUB=
+1uh-2BkfajqjkvvmCqjDqHZ8lwvev-2FqdijBL5FBS4S2BwtNeQO7bz5YGRNEKyHf87y-2BwnmW=
+lLUhOLMoliHOfrGCrGftD8kxu3f4-2BzZm-2FosYaaW9aW05lURdCCaOHXAec9OpqT-2F8SmTMe=
+ys55Kuqog9XFxpAHCnrEXk-2BdiW-2BRQHDK0uTpELg-3DiuzJ_4juuG5DfhRl7CTJQ8ZIO5wRs=
+m9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZ=
+v5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwi=
+SnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2=
+BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2=
+T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-=
+2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIo=
+S7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07i=
+rsKFMClY8GP2uJ3n52VEF4nNQiP67pBpNyrBF1Ea7agTTMrB8teJd7rnPyl5D3o4Rd0FIO9E2l3=
+jZk8z4ryRqbW1kfJ-2F4mvCcxywGK-2B7CLB3r49TZFRJnwuv6W6I4yLmTKYWagh7iqEM2zyZRg=
+ilJNo5IPB-2BgEFogxgNkFBjkr6g-3D" style=3D"border-radius: 3px; color: #fffff=
+f; display: inline-block; font-family: 'Lato', Helvetica, Arial,sans-serif;=
+ font-size: 15px; font-weight: bold; line-height: 44px; text-align: center;=
+ text-decoration: none; width: 240px; -webkit-text-size-adjust: none; mso-h=
+ide: all; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; backgr=
+ound: #4495D7 url();">Debtie Downer</a>
+															</td>
+														</tr>
+													=09
+													</tbody>
+												</table>
+												</td>
+											</tr>
+
+											<!---end of button --------------------------------->
+							</table>
+						=09
+							<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mcn=
+TextBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-table-l=
+space: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text=
+-size-adjust: 100%;" width=3D"100%">
+								<tbody class=3D"mcnTextBlockOuter">
+<tr>
+															<td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px; m=
+so-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size=
+-adjust: 100%;" valign=3D"top">
+<!--[if mso]>
+<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" widt=
+h=3D"100%" style=3D"width:100%;">
+<tr>
+<![endif]--><!--[if mso]>
+<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+											=09
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnDividerBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%; table-layout: fixed !important;" width=3D"100%">
+										<tbody class=3D"mcnDividerBlockOuter">
+											<tr>
+												<td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%; ms=
+o-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-=
+adjust: 100%; padding: 35px 18px;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"mcnDividerContent" style=3D"min-width: 100%; border-top-width: 2px; bor=
+der-top-style: solid; border-top-color: #EAEAEA; border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td style=3D"mso-line-height-rule: exactly; -ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%;"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnImageBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-t=
+ext-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnImageBlockOuter">
+											<tr>
+												<td class=3D"mcnImageBlockInner" style=3D"mso-line-height-rule:=
+ exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; paddi=
+ng: 9px;" valign=3D"top">
+												<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"mcnImageContentContainer" style=3D"min-width: 100%; border=
+-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text=
+-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td align=3D"center" class=3D"mcnImageCardBottomImageContent=
+" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webk=
+it-text-size-adjust: 100%; padding: 0px 0px 0;" valign=3D"top"><a href=3D"h=
+ttps://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtT=
+EcFT8hfo5otvD-2BhE3ylbBb-2BZTXOzIWgP1IMvVs7pZphJN2DCAgoDq3jSnHBtWa2UTOjZkgP=
+p-2BBsG9npgdbtxkAn8MKI1fSzM1BEnJIgUj28HxEvarJGjXFB8ijQGed6Nf6pZ6rzL15gCSuWF=
+A1xgbRDykfUmgR2maWIPtQ8mKkLx2JbpO53GTg7hiCEcR6qmWbl41Z0kq-2B0d9Npz9fhNQHhC6=
+-2Bu8Q6DRm-2BiwD07BqLE0n4_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiM=
+s33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDja=
+quSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz=
+-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rL=
+WUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBY=
+ECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwK=
+DZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaD=
+O2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4q3e=
+ftGMeRcBRIRa1qNhOnjLhzuwtofIICuTCLHugh7dBWn8hr-2FU-2B9DecYHYKfyZbtq-2BvJbtR=
+T3XI6HxxG-2FZX1B5V-2BrNl54jyL3u5KVrtdJtwRnf9h5emkXZc-2FsMK90lLcrnP94D34StLm=
+cWbpL-2B8l4-3D" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjus=
+t: 100%; -webkit-text-size-adjust: 100%;" target=3D"_blank"><img alt=3D"Wom=
+an holding Banksy and keeping a secret" class=3D"mcnImage" src=3D"https://b=
+raze-images.com/appboy/communication/assets/image_assets/images/626c0882982=
+a66363f0c2b2c/original.jpg?1651247233" style=3D"max-width: 620px; outline: =
+none; text-decoration: none; vertical-align: bottom; width: 564px; height: =
+auto; -ms-interpolation-mode: bicubic; border: 0px;"> </a></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnTextBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-te=
+xt-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnTextBlockOuter">
+											<tr>
+												<td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px; mso-=
+line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;" valign=3D"top">
+<!--[if mso]>
+<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" widt=
+h=3D"100%" style=3D"width:100%;">
+<tr>
+<![endif]--><!--[if mso]>
+<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+												<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"mcnTextContentContainer" style=3D"max-width: 100%; min-wid=
+th: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspac=
+e: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=
+=3D"100%">
+													<tbody>
+														<tr>
+															<td class=3D"mcnTextContent" style=3D"color: #25384F; mso-li=
+ne-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%; word-break: break-word; font-family: Helvetica; font-size: 16px; =
+line-height: 150%; padding: 0px 18px 9px;" valign=3D"top" align=3D"left">
+															<h1 style=3D"mso-line-height-rule: exactly; mso-text-raise: =
+5px; color: #3498db; line-height: 36px; display: block; font-family: Helvet=
+ica; font-size: 26px; font-style: normal; font-weight: bold; letter-spacing=
+: normal; margin: 0px; padding: 0px;" align=3D"left"><span class=3D"mso-fon=
+t-fix-arial"><font style=3D"color: #3498db;"><span style=3D"font-size: 18px=
+;"><strong>A How-Not-To: The Budget Confessional (Read)</strong></span></fo=
+nt>
+														 </span></h1>
+
+															<p style=3D"color: #25384F; mso-line-height-rule: exactly; -=
+ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-family: Hel=
+vetica; font-size: 16px; line-height: 150%; margin: 10px 0; padding: 0;" al=
+ign=3D"left"><span class=3D"mso-font-fix-arial">Have you ever bought a Star=
+bucks gift card from the grocery store just so you could categorize it as =
+=E2=80=9Cgroceries=E2=80=9D? Or categorized your manicure as =E2=80=9Cwelln=
+ess=E2=80=9D? We asked our social media followers to share the best of thei=
+r bad budgeting behavior (and now you can stick their tricks up your sleeve=
+s, too!). Here=E2=80=99s a round-up of your best worst budget hacks, you ra=
+scally rabbits.</span></p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+</tr>
+</table>
+<![endif]-->
+</td>
+											</tr>
+										</tbody>
+									</table>
+									<table style=3D"border-collapse: collapse; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust=
+: 100%;">
+								<!-----------------------------><!-----------------BUTTON----------=
+----------------->
+										 <tr>
+												<td align=3D"center" style=3D"padding-bottom: 40px; mso-line-he=
+ight-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 1=
+00%;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%=
+;">
+													<tbody>
+														<tr>
+															<td width=3D"17" style=3D"mso-line-height-rule: exactly; -ms=
+-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">&nbsp;</td>
+															<td align=3D"center" style=3D"mso-line-height-rule: exactly;=
+ -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+														=09
+															<!--[if mso]>
+  <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:sch=
+emas-microsoft-com:office:word" href=3D"https://www.youneedabudget.com/a-ho=
+w-not-to-the-budget-confessional/?utm_medium=3Demail&utm_source=3Dweekly_ne=
+wsletter&utm_campaign=3Dweekly_roundup&utm_content=3Dweekly_roundup_316" st=
+yle=3D"height:44px;v-text-anchor:middle;width:250px;" arcsize=3D"7%" stroke=
+=3D"f" fill=3D"t">
+    <v:fill type=3D"tile" src=3D"" color=3D"#4495D7" />
+    <w:anchorlock/>
+    <center style=3D"color:#ffffff;font-family:'Lato', Helvetica, Arial,san=
+s-serif;font-size:13px;font-weight:bold;">Sneaky Budgeting</center>
+  </v:roundrect>
+<![endif]-->
+
+<a class=3D"mobText mobBtn" href=3D"https://ablink.news.youneedabudget.com/=
+ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtTEcFT8hfo5otvD-2BhE3ylbBb-2BZTXOzIWgP1I=
+MvVs7pZphJN2DCAgoDq3jSnHBtWa2UTOjZkgPp-2BBsG9npgdbtxkAn8MKI1fSzM1BEnJIgUj28=
+HxEvarJGjXFB8ijQGed6Nf6pZ6rzL15gCSuWFA1xgbRDykfUmgR2maWIPtQ8mKkLx2JbpO53GTg=
+7hiCEcR6qmWbl41Z0kq-2B0d9Npz9fhNQHhC6-2Bu8Q6DRm-2BiwD07BqLtHcx_4juuG5DfhRl7=
+CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoe=
+uzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfX=
+a4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttu=
+AVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7l=
+GnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b=
+65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsK=
+K8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXA=
+loJCOCVLb07irsKFMClY8GP2uJ3n52VEF4nR4Hn4qM-2BzIDsNYs5xCt-2Fp4ZiwQ-2B7TxJoHM=
+XZ27Ns-2FIDMGm-2F49AA3PR0P-2BNkdWJGGtnV6YHOLFFiQ85OsdkzHO7-2Btg2skDpMEzqJUl=
+4fIOMrcnp-2FEG7kFRFkAV3pFlUPiU-2FBnHzpKwxIXmAhP7-2Bmn0-3D" style=3D"border-=
+radius: 3px; color: #ffffff; display: inline-block; font-family: 'Lato', He=
+lvetica, Arial,sans-serif; font-size: 15px; font-weight: bold; line-height:=
+ 44px; text-align: center; text-decoration: none; width: 240px; -webkit-tex=
+t-size-adjust: none; mso-hide: all; mso-line-height-rule: exactly; -ms-text=
+-size-adjust: 100%; background: #4495D7 url();">Sneaky Budgeting</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+
+											<!---end of button --------------------------------->
+							</table>
+								<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mc=
+nDividerBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-=
+text-size-adjust: 100%; table-layout: fixed !important;" width=3D"100%">
+										<tbody class=3D"mcnDividerBlockOuter">
+											<tr>
+												<td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%; ms=
+o-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-=
+adjust: 100%; padding: 35px 18px;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"mcnDividerContent" style=3D"min-width: 100%; border-top-width: 2px; bor=
+der-top-style: solid; border-top-color: #EAEAEA; border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td style=3D"mso-line-height-rule: exactly; -ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%;"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnImageBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-t=
+ext-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnImageBlockOuter">
+											<tr>
+												<td class=3D"mcnImageBlockInner" style=3D"mso-line-height-rule:=
+ exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; paddi=
+ng: 9px;" valign=3D"top">
+												<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"mcnImageContentContainer" style=3D"min-width: 100%; border=
+-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text=
+-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td class=3D"mcnImageContent" style=3D"mso-line-height-rule:=
+ exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; paddi=
+ng: 0 9px;" valign=3D"top" align=3D"center"><img align=3D"center" alt=3D"Bu=
+dgeting when it's not payday gif" class=3D"mcnImage" src=3D"https://braze-i=
+mages.com/appboy/communication/assets/image_assets/images/626aff87d2123352b=
+45dd6c7/original.gif?1651179399" style=3D"max-width: 620px; padding-bottom:=
+ 0; display: inline !important; vertical-align: bottom; height: auto; outli=
+ne: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: 0=
+;" width=3D"564"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnTextBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-te=
+xt-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnTextBlockOuter">
+											<tr>
+												<td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px; mso-=
+line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;" valign=3D"top">
+<!--[if mso]>
+<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" widt=
+h=3D"100%" style=3D"width:100%;">
+<tr>
+<![endif]--><!--[if mso]>
+<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+												<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"mcnTextContentContainer" style=3D"max-width: 100%; min-wid=
+th: 100%; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspac=
+e: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=
+=3D"100%">
+													<tbody>
+														<tr>
+															<td class=3D"mcnTextContent" style=3D"color: #25384F; mso-li=
+ne-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%; word-break: break-word; font-family: Helvetica; font-size: 16px; =
+line-height: 150%; padding: 0px 18px 9px;" valign=3D"top" align=3D"left">
+															<h1 style=3D"mso-line-height-rule: exactly; mso-text-raise: =
+5px; color: #3498db; line-height: 36px; display: block; font-family: Helvet=
+ica; font-size: 26px; font-style: normal; font-weight: bold; letter-spacing=
+: normal; margin: 0px; padding: 0px;" align=3D"left"><span class=3D"mso-fon=
+t-fix-arial"><font style=3D"color: rgb(52, 152, 219); text-decoration: none=
+ !important;"><span style=3D"font-size: 18px;"><strong>How to Budget Even W=
+hen It=E2=80=99s Not Payday (GIF)</strong></span></font></span></h1>
+
+															<p style=3D"color: #25384F; mso-line-height-rule: exactly; -=
+ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-family: Hel=
+vetica; font-size: 16px; line-height: 150%; margin: 10px 0; padding: 0;" al=
+ign=3D"left"><span class=3D"mso-font-fix-arial">Feeling a hankering to have=
+ a lump of cash to budget but it=E2=80=99s not payday yet? Or maybe money j=
+ust feels a little muddy in your current assignments. Use the =E2=80=9Crese=
+t assigned amounts=E2=80=9D option to easily reallocate the money in all th=
+e categories you select. It=E2=80=99ll move the balances back up to =E2=80=
+=9Cready to assign.=E2=80=9D Whether you just put them in the same spot or =
+divvy it up differently than before, it=E2=80=99s a strangely calming loop =
+any way you take it.</span></p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+						=09
+								=09
+                   =20
+									=09
+							<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mcn=
+DividerBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-t=
+ext-size-adjust: 100%; table-layout: fixed !important;" width=3D"100%">
+										<tbody class=3D"mcnDividerBlockOuter">
+											<tr>
+												<td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%; ms=
+o-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-=
+adjust: 100%; padding: 35px 18px;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"mcnDividerContent" style=3D"min-width: 100%; border-top-width: 2px; bor=
+der-top-style: solid; border-top-color: #EAEAEA; border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td style=3D"mso-line-height-rule: exactly; -ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%;"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+														=09
+
+							<table style=3D"border-collapse: collapse; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: =
+100%;">
+								<tr>
+									<td class=3D"mcnTextContent" style=3D"mso-line-height-rule: exactl=
+y; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; word-break: =
+break-word; color: #202020; font-family: Helvetica; font-size: 16px; line-h=
+eight: 150%; padding: 0 18px 9px;" valign=3D"top" align=3D"left">
+															<h1 style=3D"mso-line-height-rule: exactly; mso-text-raise: =
+5px; color: #3498db; line-height: 36px; display: block; font-family: Helvet=
+ica; font-size: 26px; font-style: normal; font-weight: bold; letter-spacing=
+: normal; margin: 0px; padding: 0px;" align=3D"left"><span class=3D"mso-fon=
+t-fix-arial"><font style=3D"color: rgb(52, 152, 219); text-decoration: none=
+ !important;"><span style=3D"font-size: 18px;"><strong>What We=E2=80=99re R=
+eading/Watching/Listening To</strong></span></font></span></h1>
+														=09
+															<ul style=3D"margin: 0 0 0 25px; padding: 0;">
+																<li style=3D"color: #4495d7; margin-bottom: 10px; margin-to=
+p: 10px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%;"><span style=3D"color: #25384f;">The undersold ben=
+efits of <a href=3D"https://ablink.news.youneedabudget.com/ls/click?upn=3DN=
+hIKhDEsR0bRyNblP9iYtZKnMOayxsJp30SV9lScZqQ-2FX1mZjnpYqAKmh6d40Ppgy-2BRTk4VX=
+yyfs7MR7ZoZjwg-3D-3DUAm__4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs=
+33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaq=
+uSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-=
+2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLW=
+UQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYE=
+Cyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKD=
+Zr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO=
+2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4niND=
+sQ-2F3-2BlFqUjdhs66G-2FTjV7goyldL8YMxJKZx1czt7CYh1ucxK-2B10bkIGbJJbB-2F3epY=
+9Jt-2B656nNeKykimJAfCdBIPZhROs5uwpZEVN39Dui4huXNowgFi1GQp5B36w87S6QBTvIoJab=
+jts-2BpNnw-3D" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust=
+: 100%; -webkit-text-size-adjust: 100%; color: #4495D7; font-weight: normal=
+; text-decoration: underline;">staying put</a></span></li>
+																<li style=3D"color: #4495d7; margin-bottom: 10px; margin-to=
+p: 10px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%;"><span style=3D"color: #25384f;"><a href=3D"https:=
+//ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtaj3DAu=
+IRokfO2aFE9-2FAz-2Fb-2Bh4bOu9O-2Be4dzK8iXp-2BAu2uJHZUG4UFdIzJ8uW3CBo0RmE6sF=
+JoyOOfU9UWO9aJbWUiZMLOaGSLLAKo-2FsRofIXpa4eJU43TwofGS2wOpoPSiFR60S7sT1VHATo=
+nA1j8w-3DT8wU_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJr=
+NqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2=
+h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6E=
+xgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhk=
+TkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbN=
+DH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05=
+-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfX=
+xkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4p80CBHJ2shxvsiu=
+-2BgTGkgEKcq-2FPhs816LnPsVCClPWjIUUHA4hYl-2BWNvi0RcsLBHtVvEfxCsebd6Q6nsAd0c=
+k98mGa3R398HtT-2FJa5whHt4KCFZpd0auDvaDpSBBS9UAxqwIeDa0DcVFULYKgeVorE-3D" st=
+yle=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-t=
+ext-size-adjust: 100%; color: #4495D7; font-weight: normal; text-decoration=
+: underline;">What home prices will look like in 2023</a>, according to Zil=
+low's revised downward forecast</span></li>
+																<li style=3D"color: #4495d7; margin-bottom: 10px; margin-to=
+p: 10px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%;"><span style=3D"color: #25384f;">An item-by-item l=
+ook at <a href=3D"https://ablink.news.youneedabudget.com/ls/click?upn=3DNhI=
+KhDEsR0bRyNblP9iYtTo4P6vxfmYfYzVu3xXwmVZdC623UWeL8EXSwxeMKvc672jq2tahEOgo8j=
+a8Hjpi55GL9efefS-2B1nT0PFMBrSAwMPbBODiCRwN7-2Bu7VVqxqe3p4dkdBtLzWg60Yd7jCwr=
+SAE5WgJBXCIgGMtHBKjecE-3DIcre_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk=
+9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUO=
+rDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba=
+1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZ=
+a9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53Ydzu=
+vVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0B=
+BJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2Bgy=
+lbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF=
+4oO1PSg2CffL1nHNzW1mOC6HQ-2B3eN11WhtSwRDed06iabLTap9DuqwsmdkFXttQYqUopOOE5K=
+t-2BAdx-2F5oJp2R7DlJ4bkXY6Ayxo0OCdm6Be6qOVJb5Gn67qof4VWdoPgeb9P8L3-2FkX8bLv=
+ZML8Aiq-2BQ-3D" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjus=
+t: 100%; -webkit-text-size-adjust: 100%; color: #4495D7; font-weight: norma=
+l; text-decoration: underline;">how much more expensive your groceries are<=
+/a>, due to inflation</span></li>
+																<li style=3D"color: #4495d7; margin-bottom: 10px; margin-to=
+p: 10px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%;"><span style=3D"color: #25384f;"><a href=3D"https:=
+//ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtZqvcfQ=
+v7W-2BAGhMEDV33Uu0-2BT36y3edJTkqOerYIPt0eTeHZ1hO5QFQXIHFPxXxzfafLFaJtFwHmfN=
+7fii8iANBMU4gDQaAHHRJQR5clWSAQiKbj_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-=
+2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgk=
+YxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn=
+4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1Y=
+BGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B5=
+3YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7=
+giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln=
+-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n=
+52VEF4t-2FkANE92rsUYYDnpgQmzQrK1oO0RdInOYeMPdiv18azv9r5ZUi-2BLQA7dlfIs6k-2F=
+KzrnOdasT21rkkiGWQL-2FUfffYUzKtqXkrSlAoxG8DW7TzbSe2wif53fANlS1XfEG0cOO2PKvI=
+fzYQ2YxuUBBlGI-3D" style=3D"mso-line-height-rule: exactly; -ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%; color: #4495D7; font-weight: no=
+rmal; text-decoration: underline;">The student loan paaaauuuuuse</a> from P=
+lanet Money</span></li>
+																<li style=3D"color: #4495d7; margin-bottom: 10px; margin-to=
+p: 10px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%;"><span style=3D"color: #25384f;"><a href=3D"https:=
+//ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtTKKEgf=
+wAcOAqtjgNe5vl0kw8dNVH4FGrSIxwGBcDyu1RF1MDNEyqKftOJ1Z09Up8ya6kcMCVVMRY6lXri=
+C1UFdFnNTXpJEN8kyzgvET-2FDCx7BsHu4BU8QOMf09HVXbBFp8CF56XV6SUJTVsRdb9rlCuXPN=
+-2BBqNSMuKJt-2FPsKmwk4xKw_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiM=
+s33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDja=
+quSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz=
+-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rL=
+WUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBY=
+ECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwK=
+DZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaD=
+O2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4lHe=
+UlpBpXaea215g-2Byjxk4fYmLDUR0c1FleS8JLx4XNHWDFFEUw5seKgFFbGBUG0qXgXz43fLS6V=
+eFiQhScNA4O0P-2Fi4gNLqi7OtvTq-2FV4Oi9FB-2FFTOQeN5LXK2Tn8FUz6aIpDCiDrWQn1l2D=
+sQ4oQ-3D" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100=
+%; -webkit-text-size-adjust: 100%; color: #4495D7; font-weight: normal; tex=
+t-decoration: underline;">Cash stuffing videos</a></span></li>
+															</ul>
+                           =20
+															<br>
+															<br>
+															<strong>Quiz answer:</strong> <a href=3D"https://ablink.news=
+.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtT1N6bSqNt6RBOnHWw5A=
+xTzpAgcF8EZaNTlCZK1QEhqBQGWthcJjNbVpdmpGFSgtrAM-2BavxFt-2BWW3-2Fw05vlI3IhlV=
+LaanGL2HAtRy9a7ugok7T-2F4OZYBKAobdC5KKSu8d5Agd1pjnUitLsNxWygL73E-3Dnd_f_4ju=
+uG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8q=
+Z1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ=
+4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p=
+4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHE=
+YtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsST=
+YfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX8=
+7itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20Ci=
+yqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4hA4enmrx7bHzoZzlE4WAlOpA4iaKDmCq=
+ZKTCM-2F6xIhYzCkESsX9UmtvYNjZpl5mhb-2Fd4wiyu46Fp2fda-2FkqpuLXUZ-2BQxf1OzgjC=
+hNLga5cpwWPQEtLCaL-2BMsORE6RDzeVwtZrI-2Fs00G3-2FVPh2IUcuk-3D" style=3D"mso-=
+line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%; color: #4495D7; font-weight: normal; text-decoration: underline=
+;">Cash stuffing</a> videos feature colorful, personalized cash binders wit=
+h compartments labeled for different categories=E2=80=94such as rent, food,=
+ saving, and sinking funds. If it sounds a lot like envelope budgeting, it =
+is! Here=E2=80=99s a TikTok trend we can get behind!! And it=E2=80=99s one =
+way young people are fighting inflation. Friends with a cash-stuffing Gen-Z=
+er? Please, please, do them and you a favor. C=E2=80=99mon. Tell them about=
+ YNAB. We=E2=80=99re just as colorful, and way more convenient.
+															<br>
+															<br>
+															<br>
+															Like what you're reading?=C2=A0<a href=3D"https://ablink.new=
+s.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYtTEcFT8hfo5otvD-2Bh=
+E3ylbBckorE2tJsUwhXLKJS-2Bw4efErFgBIv07CtqCoAxLbrog-3D-3DaGzE_4juuG5DfhRl7C=
+TJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeu=
+zETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa=
+4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuA=
+VkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lG=
+nCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b6=
+5R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK=
+8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAl=
+oJCOCVLb07irsKFMClY8GP2uJ3n52VEF4m2OcCHZgVE26woCRR-2BPj1ir2Orpl8tGyx8LnOt8o=
+U64jZBSPJK7u8znaKRPjzxtcy8P0YeQsJNL90stJUbHNjcOzhuN0p6CQ5p8unNCV4iiR0oTCN5Q=
+-2BVekhIH2Ay2LJZF2mDHF8k5gYutOxPSkab4-3D" style=3D"mso-line-height-rule: ex=
+actly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #=
+4495D7; font-weight: normal; text-decoration: underline;"><b>Share with a f=
+riend!</b></a>
+
+															<p style=3D"mso-line-height-rule: exactly; -ms-text-size-adj=
+ust: 100%; -webkit-text-size-adjust: 100%; color: #202020; font-family: Hel=
+vetica; font-size: 16px; line-height: 150%; margin: 10px 0; padding: 0;" al=
+ign=3D"left"></p>
+															</td>
+														</tr>
+												</table>
+												<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+</tr>
+</table>
+<![endif]-->
+</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnDividerBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%; table-layout: fixed !important;" width=3D"100%">
+										<tbody class=3D"mcnDividerBlockOuter">
+											<tr>
+												<td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%; ms=
+o-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-=
+adjust: 100%; padding: 35px 18px;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"mcnDividerContent" style=3D"min-width: 100%; border-top-width: 2px; bor=
+der-top-color: #EAEAEA; border-top-style: solid; border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td style=3D"mso-line-height-rule: exactly; -ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%;"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnFollowBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-=
+text-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnFollowBlockOuter">
+											<tr>
+												<td align=3D"center" class=3D"mcnFollowBlockInner" style=3D"mso=
+-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-a=
+djust: 100%; padding: 9px;" valign=3D"top">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"mcnFollowContentContainer" style=3D"min-width: 100%; border-collapse: c=
+ollapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust=
+: 100%; -webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td align=3D"center" style=3D"padding-left: 9px; padding-rig=
+ht: 9px; mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%;">
+															<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"mcnFollowContent" style=3D"min-width: 100%; border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" width=3D"100%">
+																<tbody>
+																	<tr>
+																		<td align=3D"center" style=3D"padding-top: 9px; padding-r=
+ight: 9px; padding-left: 9px; mso-line-height-rule: exactly; -ms-text-size-=
+adjust: 100%; -webkit-text-size-adjust: 100%;" valign=3D"top">
+																		<table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; =
+mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-size-adjust=
+: 100%;">
+																			<tbody>
+																				<tr>
+																					<td align=3D"center" style=3D"mso-line-height-rule: ex=
+actly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=
+=3D"top">
+<!--[if mso]>
+<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tr>
+<![endif]--><!--[if mso]>
+<td align=3D"center" valign=3D"top">
+<![endif]-->
+																					<table align=3D"left" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"display: inline; border-collapse: collapse; mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webki=
+t-text-size-adjust: 100%;">
+																						<tbody>
+																							<tr>
+																								<td class=3D"mcnFollowContentItemContainer" style=
+=3D"padding-right: 10px; padding-bottom: 9px; mso-line-height-rule: exactly=
+; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=3D"to=
+p">
+																								<table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"mcnFollowContentItem" style=3D"border-collapse: collapse; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -w=
+ebkit-text-size-adjust: 100%;" width=3D"100%">
+																									<tbody>
+																										<tr>
+																											<td align=3D"left" style=3D"mso-line-height-rule=
+: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padd=
+ing: 5px 10px 5px 9px;" valign=3D"middle">
+																											<table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-si=
+ze-adjust: 100%;" width=3D"">
+																												<tbody>
+																													<tr>
+																														<td align=3D"center" class=3D"mcnFollowIconCo=
+ntent" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" valign=3D"middle" width=3D"24"><a href=3D"=
+https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYt=
+f9iu49tIOfYhYqsEu1M7Dc-2BTyv7w0tGAbBrSrNrBSiKhN1r_4juuG5DfhRl7CTJQ8ZIO5wRsm=
+9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv=
+5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiS=
+nwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2B=
+MCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T=
+10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2=
+BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS=
+7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07ir=
+sKFMClY8GP2uJ3n52VEF4mIQ1BiZW7O-2BtNiOL6YYavFBMDlsTX-2BzsjwlCbXyDRoXylHY1LX=
+DBLJ7eq5oWTAHYbVmmAryojOFBQrU5cG-2FO4wVNs0k9IQ4yS786mgPcyYsT3E4UknSBT-2FySs=
+BZQEO4oUSKSV3mhKAyEvZ14DOCULc-3D" style=3D"mso-line-height-rule: exactly; -=
+ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" target=3D"_blan=
+k"><img height=3D"24" src=3D"https://www-assets.youneedabudget.com/wp-conte=
+nt/uploads/2019/08/08162623/color-facebook-48.png" style=3D"display: block;=
+ height: auto; outline: none; text-decoration: none; -ms-interpolation-mode=
+: bicubic; border: 0;" width=3D"24"></a></td>
+																													</tr>
+																												</tbody>
+																											</table>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+<td align=3D"center" valign=3D"top">
+<![endif]-->
+
+																					<table align=3D"left" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"display: inline; border-collapse: collapse; mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webki=
+t-text-size-adjust: 100%;">
+																						<tbody>
+																							<tr>
+																								<td class=3D"mcnFollowContentItemContainer" style=
+=3D"padding-right: 10px; padding-bottom: 9px; mso-line-height-rule: exactly=
+; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=3D"to=
+p">
+																								<table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"mcnFollowContentItem" style=3D"border-collapse: collapse; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -w=
+ebkit-text-size-adjust: 100%;" width=3D"100%">
+																									<tbody>
+																										<tr>
+																											<td align=3D"left" style=3D"mso-line-height-rule=
+: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padd=
+ing: 5px 10px 5px 9px;" valign=3D"middle">
+																											<table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-si=
+ze-adjust: 100%;" width=3D"">
+																												<tbody>
+																													<tr>
+																														<td align=3D"center" class=3D"mcnFollowIconCo=
+ntent" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" valign=3D"middle" width=3D"24"><a href=3D"=
+https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYt=
+Q-2FNvTGrGSD1kjWvFOxn9oOANkCiu4T-2Fn86zBXT1D5cRqRDy_4juuG5DfhRl7CTJQ8ZIO5wR=
+sm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2Ila=
+Zv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadw=
+iSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-=
+2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM=
+2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6=
+-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbI=
+oS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07=
+irsKFMClY8GP2uJ3n52VEF4t67wWi-2FGZmMUIVWsGpU98Adxhzl3-2FJF6phTpsoM7a3NfEPzm=
+8hVcgL86uyo2SZDFrahE4G5toJHDOw1phWg-2B40XLst-2Fv7wKNVZ2QSHpo9LlcVwfZHdzVAvo=
+ujg-2F-2Bt0L6fMmmhAd5Ya7UxQgv6Q9l5E-3D" style=3D"mso-line-height-rule: exac=
+tly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" target=3D=
+"_blank"><img height=3D"24" src=3D"https://www-assets.youneedabudget.com/wp=
+-content/uploads/2019/08/08162629/color-twitter-48.png" style=3D"display: b=
+lock; height: auto; outline: none; text-decoration: none; -ms-interpolation=
+-mode: bicubic; border: 0;" width=3D"24"></a></td>
+																													</tr>
+																												</tbody>
+																											</table>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+<td align=3D"center" valign=3D"top">
+<![endif]-->
+
+																					<table align=3D"left" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"display: inline; border-collapse: collapse; mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webki=
+t-text-size-adjust: 100%;">
+																						<tbody>
+																							<tr>
+																								<td class=3D"mcnFollowContentItemContainer" style=
+=3D"padding-right: 10px; padding-bottom: 9px; mso-line-height-rule: exactly=
+; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=3D"to=
+p">
+																								<table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"mcnFollowContentItem" style=3D"border-collapse: collapse; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -w=
+ebkit-text-size-adjust: 100%;" width=3D"100%">
+																									<tbody>
+																										<tr>
+																											<td align=3D"left" style=3D"mso-line-height-rule=
+: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padd=
+ing: 5px 10px 5px 9px;" valign=3D"middle">
+																											<table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-si=
+ze-adjust: 100%;" width=3D"">
+																												<tbody>
+																													<tr>
+																														<td align=3D"center" class=3D"mcnFollowIconCo=
+ntent" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" valign=3D"middle" width=3D"24"><a href=3D"=
+https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYt=
+SBJmRQOqycEE8UkEBpnCXeNiY38mLPdxeNTY9MxTx-2F3I6rAAF6wUwTxLMxbZ3-2BxtQ-3D-3D=
+vtQK_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1Puvk=
+Fb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-=
+2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsM=
+rxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CC=
+Ed69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4=
+-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPH=
+QxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2B=
+OzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4m3CGIRq1w9NvXfLcz23yHtxR=
+eRZHw1nb4vUX8A4vF0zOnndhWlS0V1y1PpddJrW6XdyNbqmwYohoj08OBapIlLqAh9gIrg3fMZ-=
+2F8FPCrnciYwlZIQOEvkZaNmnvly3HWPaALy0qhAFyohZYrh-2FNU7k-3D" style=3D"mso-li=
+ne-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%;" target=3D"_blank"><img height=3D"24" src=3D"https://www-assets.y=
+ouneedabudget.com/wp-content/uploads/2019/08/08162625/color-instagram-48.pn=
+g" style=3D"display: block; height: auto; outline: none; text-decoration: n=
+one; -ms-interpolation-mode: bicubic; border: 0;" width=3D"24"></a></td>
+																													</tr>
+																												</tbody>
+																											</table>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+<td align=3D"center" valign=3D"top">
+<![endif]-->
+
+																					<table align=3D"left" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"display: inline; border-collapse: collapse; mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webki=
+t-text-size-adjust: 100%;">
+																						<tbody>
+																							<tr>
+																								<td class=3D"mcnFollowContentItemContainer" style=
+=3D"padding-right: 10px; padding-bottom: 9px; mso-line-height-rule: exactly=
+; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=3D"to=
+p">
+																								<table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"mcnFollowContentItem" style=3D"border-collapse: collapse; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -w=
+ebkit-text-size-adjust: 100%;" width=3D"100%">
+																									<tbody>
+																										<tr>
+																											<td align=3D"left" style=3D"mso-line-height-rule=
+: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padd=
+ing: 5px 10px 5px 9px;" valign=3D"middle">
+																											<table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-si=
+ze-adjust: 100%;" width=3D"">
+																												<tbody>
+																													<tr>
+																														<td align=3D"center" class=3D"mcnFollowIconCo=
+ntent" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" valign=3D"middle" width=3D"24"><a href=3D"=
+https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYt=
+TKKEgfwAcOAqtjgNe5vl0lCs58ekIrdrBG-2BlKlhPSJIHHYd_4juuG5DfhRl7CTJQ8ZIO5wRsm=
+9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv=
+5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiS=
+nwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2B=
+MCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T=
+10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2=
+BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS=
+7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07ir=
+sKFMClY8GP2uJ3n52VEF4k-2FGGP-2FLR9NQYHYv46u3cwO0p6pu83tFg6msWzPp2IqI5l27ahX=
+-2FEVUbtfIlqyivnvWlG19dpLQiuyG5VB6VbanVJvPVYQAFxLAWka1AntI7zboZ61tCt2-2BNoq=
+pLBW1zV4x35Vlhm4nne38li2GeBsY-3D" style=3D"mso-line-height-rule: exactly; -=
+ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" target=3D"_blan=
+k"><img height=3D"24" src=3D"https://appboy-images.com/appboy/communication=
+/assets/image_assets/images/6176c9dc0641cf6a9ea0e4d8/original.png?163517487=
+6" style=3D"display: block; height: auto; outline: none; text-decoration: n=
+one; -ms-interpolation-mode: bicubic; border: 0;" width=3D"24"></a></td>
+																													</tr>
+																												</tbody>
+																											</table>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+<td align=3D"center" valign=3D"top">
+<![endif]-->
+
+																					<table align=3D"left" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"display: inline; border-collapse: collapse; mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webki=
+t-text-size-adjust: 100%;">
+																						<tbody>
+																							<tr>
+																								<td class=3D"mcnFollowContentItemContainer" style=
+=3D"padding-right: 10px; padding-bottom: 9px; mso-line-height-rule: exactly=
+; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=3D"to=
+p">
+																								<table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"mcnFollowContentItem" style=3D"border-collapse: collapse; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -w=
+ebkit-text-size-adjust: 100%;" width=3D"100%">
+																									<tbody>
+																										<tr>
+																											<td align=3D"left" style=3D"mso-line-height-rule=
+: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padd=
+ing: 5px 10px 5px 9px;" valign=3D"middle">
+																											<table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-si=
+ze-adjust: 100%;" width=3D"">
+																												<tbody>
+																													<tr>
+																														<td align=3D"center" class=3D"mcnFollowIconCo=
+ntent" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" valign=3D"middle" width=3D"24"><a href=3D"=
+https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYt=
+VqG8mKbnmOzyTeOy5CT4Mc9e-2Bkt0JW3m-2BLTTcUMUwnh8mceUs7YDgO26ce5TyQTMA-3D-3D=
+AGtK_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1Puvk=
+Fb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-=
+2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsM=
+rxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CC=
+Ed69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4=
+-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPH=
+QxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2B=
+OzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4sTWQylFRC18Leei-2FJc02Wk=
+n0yK4Lzwy8xaPb6g30cjq6igS-2Bh-2BBvMsWVvpNX6em1dLYx0RVOfPT709oA8-2FbV1JZhoex=
+oWID4YhhkrZREMyUBfFy7m39IpT2natXood1QMpJ3XWp5YiAPnZUi2r1ki4-3D" style=3D"ms=
+o-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-=
+adjust: 100%;" target=3D"_blank"><img height=3D"24" src=3D"https://www-asse=
+ts.youneedabudget.com/wp-content/uploads/2019/08/08162631/color-youtube-48.=
+png" style=3D"display: block; height: auto; outline: none; text-decoration:=
+ none; -ms-interpolation-mode: bicubic; border: 0;" width=3D"24"></a></td>
+																													</tr>
+																												</tbody>
+																											</table>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+<td align=3D"center" valign=3D"top">
+<![endif]-->
+
+																					<table align=3D"left" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"display: inline; border-collapse: collapse; mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webki=
+t-text-size-adjust: 100%;">
+																						<tbody>
+																							<tr>
+																								<td class=3D"mcnFollowContentItemContainer" style=
+=3D"padding-right: 0; padding-bottom: 9px; mso-line-height-rule: exactly; -=
+ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=3D"top">
+																								<table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"mcnFollowContentItem" style=3D"border-collapse: collapse; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -w=
+ebkit-text-size-adjust: 100%;" width=3D"100%">
+																									<tbody>
+																										<tr>
+																											<td align=3D"left" style=3D"mso-line-height-rule=
+: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padd=
+ing: 5px 10px 5px 9px;" valign=3D"middle">
+																											<table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-text-si=
+ze-adjust: 100%;" width=3D"">
+																												<tbody>
+																													<tr>
+																														<td align=3D"center" class=3D"mcnFollowIconCo=
+ntent" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" valign=3D"middle" width=3D"24"><a href=3D"=
+https://ablink.news.youneedabudget.com/ls/click?upn=3DNhIKhDEsR0bRyNblP9iYt=
+YLIr0TnO-2BmRWoYuM6NL30211gWdZEspvw1BWTXXOtk8PCkKL-2B0-2F-2F-2Fg9CTi2feiH8v=
+qZHdfwXWGTblqPUBKisYJOUXWu5jLasgRcD9ZD1Nq-2FBj76_4juuG5DfhRl7CTJQ8ZIO5wRsm9=
+lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5=
+ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSn=
+wX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BM=
+CUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T1=
+0mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2B=
+gB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7=
+qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irs=
+KFMClY8GP2uJ3n52VEF4n4zFlllJ3AKROsffElSSI9BfWO5HTYvLaE3Avjf4N86qTaKwfAqVnTk=
+pa44uDP-2BNlvavSoq8JpmBLIwPa-2BW-2BhX4bAkvMhnk4achJkzJVfVuAR-2B4iYLlnMOWHRF=
+4e8Tg-2Bu6AuP6ZdRDq0C52IyZIZeY-3D" style=3D"mso-line-height-rule: exactly; =
+-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" target=3D"_bla=
+nk"><img height=3D"24" src=3D"https://appboy-images.com/appboy/communicatio=
+n/assets/image_assets/images/6176c9d8fe9a4850236b92e7/original.png?16351748=
+72" style=3D"display: block; height: auto; outline: none; text-decoration: =
+none; -ms-interpolation-mode: bicubic; border: 0;" width=3D"24"></a></td>
+																													</tr>
+																												</tbody>
+																											</table>
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+</tr>
+</table>
+<![endif]-->
+</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnDividerBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit=
+-text-size-adjust: 100%; table-layout: fixed !important;" width=3D"100%">
+										<tbody class=3D"mcnDividerBlockOuter">
+											<tr>
+												<td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%; ms=
+o-line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-=
+adjust: 100%; padding: 18px 18px 0px;">
+												<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"mcnDividerContent" style=3D"min-width: 100%; border-top-width: 2px; bor=
+der-top-color: #FFFFFF; border-top-style: solid; border-collapse: collapse;=
+ mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td style=3D"mso-line-height-rule: exactly; -ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%;"></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+					</tr>
+					<tr>
+						<td align=3D"center" id=3D"templateFooter" style=3D"mso-line-height-r=
+ule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; b=
+order-top-width: 0; border-bottom-width: 0; padding-top: 9px; padding-botto=
+m: 9px; background: none no-repeat center / cover;" valign=3D"top" bgcolor=
+=3D"#FFFFFF">
+<!--[if (gte mso 9)|(IE)]>
+<table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" wi=
+dth=3D"600" style=3D"width:600px;">
+<tr>
+<td align=3D"center" valign=3D"top" width=3D"600" style=3D"width:600px;">
+<![endif]-->
+						<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"templateContainer" style=3D"border-collapse: collapse; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-=
+text-size-adjust: 100%; max-width: 600px !important;" width=3D"100%">
+							<tbody>
+								<tr>
+									<td class=3D"footerContainer" style=3D"mso-line-height-rule: exact=
+ly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign=3D"=
+top">
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"m=
+cnTextBlock" style=3D"min-width: 100%; border-collapse: collapse; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; -ms-text-size-adjust: 100%; -webkit-te=
+xt-size-adjust: 100%;" width=3D"100%">
+										<tbody class=3D"mcnTextBlockOuter">
+											<tr>
+												<td class=3D"mcnTextBlockInner" style=3D"padding-top: 9px; mso-=
+line-height-rule: exactly; -ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;" valign=3D"top">
+<!--[if mso]>
+<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" widt=
+h=3D"100%" style=3D"width:100%;">
+<tr>
+<![endif]--><!--[if mso]>
+<td valign=3D"top" width=3D"300" style=3D"width:300px;">
+<![endif]-->
+												<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"mcnTextContentContainer" style=3D"max-width: 300px; border=
+-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text=
+-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td class=3D"mcnTextContent" style=3D"mso-line-height-rule: =
+exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; word-b=
+reak: break-word; color: #656565; font-family: Helvetica; font-size: 10px; =
+line-height: 150%; padding: 0px 18px 9px;" valign=3D"top" align=3D"left">
+<em>Copyright =C2=A9 2022, You Need A Budget, All rights reserved.</em><br>
+															We only want you to receive this awesome, short, informative=
+ (and occasionally hilarious) newsletter if you opted in. If you change you=
+r mind, let us know!=C2=A0<br>
+															<br>
+															<strong>Our mailing address is:</strong><br>
+															You Need A Budget<br>
+															770 E. Main St., #236<br>
+															Lehi, UT 84043<br>
+															=C2=A0</td>
+														</tr>
+													</tbody>
+												</table>
+												<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+<td valign=3D"top" width=3D"300" style=3D"width:300px;">
+<![endif]-->
+
+												<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"mcnTextContentContainer" style=3D"max-width: 300px; border=
+-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; -ms-text=
+-size-adjust: 100%; -webkit-text-size-adjust: 100%;" width=3D"100%">
+													<tbody>
+														<tr>
+															<td class=3D"mcnTextContent" style=3D"mso-line-height-rule: =
+exactly; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; word-b=
+reak: break-word; color: #656565; font-family: Helvetica; font-size: 10px; =
+line-height: 150%; padding: 0px 18px 9px;" valign=3D"top" align=3D"left">
+															<p style=3D"text-transform: uppercase; font-family: 'Helveti=
+caNeue-Bold', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-ser=
+if; letter-spacing: 2px; font-weight: bold; mso-line-height-rule: exactly; =
+-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #656565;=
+ font-size: 12px; line-height: 150%; margin: 10px 0 15px; padding: 0;" alig=
+n=3D"center"><a href=3D"https://ablink.news.youneedabudget.com/ls/click?upn=
+=3DNhIKhDEsR0bRyNblP9iYtTEcFT8hfo5otvD-2BhE3ylbBckorE2tJsUwhXLKJS-2Bw4efErF=
+gBIv07CtqCoAxLbrog-3D-3D2Q9R_4juuG5DfhRl7CTJQ8ZIO5wRsm9lZj6nmybG42CC-2FwSk9=
+JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2IlaZv5ZuC8jLf0T2HCgkYxmUOr=
+DjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqadwiSnwX5dIky-2FEutn4iyba1=
+BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fmr-2BMCUy-2Fsmp4ET1YBGikZa=
+9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfHdM2T10mweEO-2FK-2B53Ydzuv=
+VBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nwn6-2BgB-2Fqp4Ga1Oj7giA0BB=
+JwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFGbIoS7qmCe1PZuODiVln-2Bgyl=
+baDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb07irsKFMClY8GP2uJ3n52VEF4=
+nIzmDcrnpcr3MdV4iWtXEcz8FQzrdtLEz6h3TJG4VnEqAXplSUBCmujM8GmGBOF4t2FDkfaY93n=
+iJsFWJusyi5Xd0xy8F2hFBNSkIA3uYLsPgJWD86ZwMbibz2xD-2Bhgfx5d9eNGnvqVO4h84YibI=
+zE-3D" style=3D"mso-line-height-rule: exactly; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%; color: #656565; font-weight: normal; text-d=
+ecoration: underline;" target=3D"_blank">subscribe to this list </a></p>
+
+															<p style=3D"text-transform: uppercase; font-family: 'Helveti=
+caNeue-Bold', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-ser=
+if; letter-spacing: 2px; font-weight: bold; mso-line-height-rule: exactly; =
+-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #656565;=
+ font-size: 12px; line-height: 150%; margin: 10px 0 15px; padding: 0;" alig=
+n=3D"center"><a href=3D"https://ablink.news.youneedabudget.com/ls/click?upn=
+=3DNhIKhDEsR0bRyNblP9iYtdMU6Av-2BjJ-2Btey9JD4swgiMmmqSdbY5e3lq8ky5aS5K6IJQU=
+j7u7Ax-2F7r8D5HHne5-2FgBdLRcf8IxT6F9WG4pRMItUzP4AqiTOBmklZomRZJ-2FV2-2Bq0Bp=
+y2pySFnD6mob4VIHIAz5yaG-2ForfBd0w-2BUfOFNpXvIwh6e-2F13SMod6oitPV49KwOQYhkoz=
+RG8JnLCHnVHbDK3cboRV1EW2ij5FhCS4cAsIjaLYuu72yaNbfFNV7MdEpyTHo3-2FMO7DrBJbyN=
+o9Tp5sOyzQ4MU38CYKvtGyaHhOdpaBqycfXlLMy0PnbJLMeZYwG6mLqkosvggNOd-2Fyl5Vk4Pv=
+OBUMod0Nj1aKzRgxXQQpE1R8J81nywZVzvi6coPORzrJXYt-2BTsSj6gKEoSsPz2tddVAl7aGi-=
+2FqFunuEauO8ZUMuzg9AwrjMIognGeYmqI5fDMk7F6-2Bi26szy8xbY5iztZNmIW-2FF3-2BIdo=
+iTZuStk-2BIu9n4XDdNtS8uePZcSBGKnG-2B-2FWJ2A7-2FMRXVJaH9XtiL6RgxACYJt4d2cCGY=
+oaDlGvjvzPFOl4yk4-2FLlQzrkOazcHBdhrDtyqzcNw-3D-3DCP0K_4juuG5DfhRl7CTJQ8ZIO5=
+wRsm9lZj6nmybG42CC-2FwSk9JiMs33nSduwWsJrNqFs1PuvkFb4h3I8qZ1-2FXxoeuzETTFq2I=
+laZv5ZuC8jLf0T2HCgkYxmUOrDjaquSV0ZOCR7H2h3SrB97X-2Be-2FhJ4FxOtjlfXa4F7cjyqa=
+dwiSnwX5dIky-2FEutn4iyba1BDz-2FAfJx94g6ExgVy0SzsMrxNoa11p4AruLZttuAVkhI-2Fm=
+r-2BMCUy-2Fsmp4ET1YBGikZa9rLWUQtmsD9yFhkTkCzUZ0CCEd69lNHEYtpprOR7lGnCY0PqfH=
+dM2T10mweEO-2FK-2B53YdzuvVBYECyx8gtvSkbNDH0C9FlG4-2FhFsSTYfYqObU6b65R93k5Nw=
+n6-2BgB-2Fqp4Ga1Oj7giA0BBJwKDZr-2FR4pQ05-2F1oEUPHQxbTrDX87itbkTDsKK8t4ZqfFG=
+bIoS7qmCe1PZuODiVln-2BgylbaDO2s-2ByjCMfXxkAYDZ-2BOzqM20CiyqhhSwEXAloJCOCVLb=
+07irsKFMClY8GP2uJ3n52VEF4lDzNW69pBHSRfs3sjp9aOLgUeYDhd1ElI-2BYTmcEmJGM3wbbZ=
+ozkvLmGgZMnzmAN99B3u5hWwYALMqo1u4oYZxY5IgKG7dCciR4s8EOKjVydbhkJHPCsChbQiNzf=
+OScQzFNwP46G9yHzmMEH1B1ps-2BM-3D" style=3D"mso-line-height-rule: exactly; -=
+ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; color: #656565; =
+font-weight: normal; text-decoration: underline;">unsubscribe from this lis=
+t</a></p>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<!--[if mso]>
+</td>
+<![endif]--><!--[if mso]>
+</tr>
+</table>
+<![endif]-->
+</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- // END TEMPLATE -->
+</td>
+		</tr>
+	</tbody>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+<img src=3D"https://ablink.news.youneedabudget.com/wf/open?upn=3DXe-2BFygLE=
+YXW14iBR2c9O5XfaKHFDUvbd84u8HGflfWG6-2Fo-2Fpla-2ByyySLDSlm60IxZ-2F0TYeQqAbj=
+UtAVrvGml9f7jCwdbOtDYjlBPXMGIlrms5pwTClG4NWDxhogw2pvalW8qUzXc9ykEIniysZKU3S=
+RVDk1Npr5QTchN0mVLVaUTjmnDwiuEb41pDphtnCyC-2B9s1F-2Bxmkim3BL5-2B-2FGNxNh5yU=
+1N7OP93NTOu10-2FHmMQQO4CQflT1Wdt36yaqlY2E9srHF21zTF1Xe85vYL4yb6RLCq4wj-2FhQ=
+onhPd0I2DOGflLOGWB6mwRLZw0nkB9H-2FOF-2FSFgUnTGU0P44NrEjaqrfm-2BmT6zF8yf8ej-=
+2F4UI-2FESXbxidIBstAh0jRYVqwGugBQSxeb9zLhCbmVhYcEOFPWU8-2BbBLJjupDsi-2F7MW5=
+Uy7mfy2dljdY9N6MQIusQmpPpqm6fqwJP-2FR41kzEM-2FtrPun2CLqzntzuUAgHGrz6tN1EWUp=
+4CPeaLLv3O4zOz0IetnlAFB1-2FhW6oMbmKdardcb65jGF27Q7besZf4VZ1ifXp7aS4C4fgYygI=
+GYkJt58xiYKaGYMj34T9-2Biu7S20n2etpH6S-2F-2FXqwEUoqmyPyTgQZnuQBnfW4FmPvUyjSm=
+OSKhcqB1qaiRzidfB4wpbAIN9TROimIRlbwy-2BSW-2FNQhXr0-3D" alt=3D"" width=3D"1"=
+ height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !import=
+ant;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !impo=
+rtant;margin-right:0 !important;margin-left:0 !important;padding-top:0 !imp=
+ortant;padding-bottom:0 !important;padding-right:0 !important;padding-left:=
+0 !important;"/></body>
+</html>
+
+--204351a044f636e2e1929753438680e712832cbc0030ff7716b4688337a7--

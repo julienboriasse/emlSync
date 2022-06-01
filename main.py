@@ -1,16 +1,18 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+import datetime
+import json
+import eml_parser
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def json_serial(obj):
+    if isinstance(obj, datetime.datetime):
+        serial = obj.isoformat()
+        return serial
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+with open('test/email_ynab.eml', 'rb') as fhdl:
+    raw_email = fhdl.read()
+
+ep = eml_parser.EmlParser()
+parsed_eml = ep.decode_email_bytes(raw_email)
+
+print(json.dumps(parsed_eml, default=json_serial))
