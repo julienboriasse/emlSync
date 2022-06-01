@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ba2b31e-4bb5-4ccc-b2b1-c99b03ebb193" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654043847745</updated>
-      <workItem from="1654043848984" duration="2290000" />
+      <workItem from="1654043848984" duration="2964000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1654043911298</created>
@@ -104,7 +104,28 @@
       <option name="project" value="LOCAL" />
       <updated>1654045119262</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Extract date working">
+      <created>1654094361386</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654094361386</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Configuration">
+      <created>1654094388678</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1654094388678</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Create SQLite DB and table">
+      <created>1654094779152</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654094779152</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,10 +135,12 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Add config files" />
     <MESSAGE value="Test email" />
+    <MESSAGE value="Extract date working" />
     <MESSAGE value="Configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configuration" />
+    <MESSAGE value="Create SQLite DB and table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create SQLite DB and table" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/emlSync$main.coverage" NAME="main Coverage Results" MODIFIED="1654094184037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/emlSync$main.coverage" NAME="main Coverage Results" MODIFIED="1654094667564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
