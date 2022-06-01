@@ -1,0 +1,643 @@
+Return-path: <ptheberge@videotron.ca>
+Original-recipient: rfc822;julien@boriasse.com
+Received: from ci74p00im-qukt09070702.me.com by p104-mailgateway-smtp-dd5bdcc57-8f62t (mailgateway 2213B145)
+	with SMTP id d5afd14e-eedd-4ca2-b487-e43631db6c93 
+	for <julien@boriasse.com>; Thu, 28 Apr 2022 13:23:51 GMT
+X-Apple-MoveToFolder: INBOX 
+X-Apple-Action: MOVE_TO_FOLDER/INBOX
+X-Apple-UUID: d5afd14e-eedd-4ca2-b487-e43631db6c93
+Received: from alt31.smtp-out.videotron.ca (alt31.smtp-out.videotron.ca [24.53.0.20])
+	by ci74p00im-qukt09070702.me.com (Postfix) with ESMTPS id 05C718003EA
+	for <julien@boriasse.com>; Thu, 28 Apr 2022 13:23:48 +0000 (UTC)
+X-ICL-SCORE: 3.0220332300
+X-ICL-INFO: GAtbVUseBlBHSVVESgMGUldZCh4MXUMRSFsIVVhDQ19XFwkZHRIWBxFERAcMWFMAEAsBEjhGXwYQ
+ FhIFF14YARRbRhEcDRQUHB0DGAxCWQxbGgdVWENfEkhbVENWBQVMRVdUR1oQXgcZFltVGVxCUURX
+ FRoMQBsNAA1IARFUUw0BCwkZVlNXQFUJEgVFElcOAUpXWQtdQhJYFhMDVkZfBhAWEgUXXhgBFFtG
+ ExwNFBcbEggYD14UQhgQAkpaDAJbME0lM0ACGydCT1FaTHUAU1g7U0E7HXAgQzojMTsFAyM2PyYB
+ EVRTDQELCRlWU1dcV1kUFEUSXBcZEAMZOFJZEBwYFQQdHlUNGFs=
+Authentication-Results: dmarc.icloud.com; dmarc=none header.from=videotron.ca
+x-dmarc-info: pass=none; dmarc-policy=(nopolicy); s=u0; d=u0
+x-dmarc-policy: none
+Authentication-Results: dkim-verifier.icloud.com; dkim=none
+Received: from smtpclient.apple ([184.161.167.177])
+	by Videotron with ESMTPA
+	id k468nEwt01mHbk46Bnp1Y0; Thu, 28 Apr 2022 09:22:23 -0400
+X-Authority-Analysis: v=2.4 cv=HO2gqqhv c=1 sm=1 tr=0 ts=626a950f
+ a=+j2K+mYDl/IKrHKrw7G5Lg==:117 a=+j2K+mYDl/IKrHKrw7G5Lg==:17
+ a=5KLPUuaC_9wA:10 a=7-t7MVIwAAAA:8 a=z8_eoGVJAAAA:8 a=J2QFGNBE717f9fCx_GwA:9
+ a=QEXdDO2ut3YA:10 a=m-8E4uvgAAAA:8 a=qcHfN6GH-RA86a-YpSUA:9
+ a=W6el8AcpuopSITCK:21 a=_W_S_7VecoQA:10 a=mtayYY9AhKEA:10
+ a=mmF8OvXKpvbqxR_Ref_A:22
+From: paul theberge <ptheberge@videotron.ca>
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_9527D9C1-A5A5-4F6C-B60A-7EFB41D00A65"
+Mime-Version: 1.0 (Mac OS X Mail 14.0 \(3654.120.0.1.13\))
+Subject: =?utf-8?Q?Giant_ichthyosaur=E2=80=99s_huge_tooth_points_to_sea_cr?=
+ =?utf-8?Q?eatures_with_robust_bite_=7C_Palaeontology_=7C_The_Guardian?=
+Message-Id: <49E4CD82-E767-4E61-B56C-FB6CEFC55ACF@videotron.ca>
+Date: Thu, 28 Apr 2022 09:22:19 -0400
+To: Boriasse Julien <julien@boriasse.com>
+X-Mailer: Apple Mail (2.3654.120.0.1.13)
+X-CMAE-Envelope: MS4xfHQ7ncqYkbeNgwZsUjyoqgdTkGXfWDHYpGdCNHQ2jGt80Rpu0WWC9mTJ6bRX/BTdLrBqx0s2A31OsYDl2C/FUymHDkzSoKtuhCimn3pGbRlaGEcrBPPN
+ p+HL6Jn4uoF2QJyK+Ap+0AtAMEdayr7X6JdST6j/4W4JIE9vaXn/RrZS+jKoRCY8oT5LdUlye4uQNIiN00+g1folEtuA7AEweAA=
+X-MANTSH: 1TEIXSUMdHVoaGkNHB1tfQV4aEhoTGxsaGxEKTEMXGxoEGxwSBBscGgQfGhAbHho
+ fGhEKTFkXGRwRCllEF3ocEh5PBUhDa0xQEQpZTRdkRURPEQpZSRcacRoQGncGGxxxHR8QHxp3B
+ hgaBhoRClleF2NueREKQ04XZkNBWH5JQWUZaVxbG1BAf3tDeVl7eXNQc34HeBl7XEkRClhcFxk
+ EGgQeHAdLHxsZG0wdGwUbGhoEEhgEHhgEGB0QGx4aHxoRCl5ZF3BFbkVrEQpNXBcZHB0RCkxaF
+ 2xpa01rEQpDWhcYHgQfGQQaBBgaEQpCXhcbEQpCRRdhE21Tcmkda2BwTxEKQk4XZEZTGH1fc0h
+ ucEcRCkJMF2ITc0xITEd4RhwfEQpCbBdsXX9zZhsZRUlLWhEKQkAXY0keWlJIHE1ma1sRCkJYF
+ 2AFeUABY0ISYW1dEQpaWBcSEQpwaBdhYEVibERoWkFhWxAZGhEKcGgXZEAdHwUBTHMYXk4QGRo
+ RCnBoF2hrWl8dGEhLa0JuEBsaExEKcGgXYWUTY1BHelh7cBgQGRoRCnBoF2Rhc0d9fh9OSx9GE
+ BkaEQpwfRdhfG1rbnJ/eWtCcxAZGhEKcH0Xeh5pTHtfZh59W24QGRoRCnB9F2RMf2B+AWVmZ1h
+ iEBkaEQpwfRdrWHAae3lYTWBCWhAZGhEKcH8XZWgYfUx/UEBSfmQQGB0RCnBfF2xNQmEdYm9Mf
+ 1trEB4aEQpwXxdpRR5bQHtwYUJwGxAHGxIRCnB/F29eXHJ8ZQVmcGVCEBkZEQpwXxdpaWMabER
+ pbkx9fxAZGhEKcH8XZntSf0JlQm9vRRIQHx4RCnBfF2ZpXElJHFllQkRbEBkaEQpwbBd6b3thU
+ 3pdfl8SQxAZGhEKcEwXaH56AX9IW3lZY3gQGRoRCnBDF2ZtREVIQkYfGh5vEBkaEQptfhcaEQp
+ YTRdLEQ==
+X-CLX-Shades: None
+X-Proofpoint-GUID: LikrTckO3Cvq1zjUQiSsQSYzYT-R3Qvc
+X-Proofpoint-ORIG-GUID: LikrTckO3Cvq1zjUQiSsQSYzYT-R3Qvc
+
+
+--Apple-Mail=_9527D9C1-A5A5-4F6C-B60A-7EFB41D00A65
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+Salut Julien,
+
+=C3=80 titre d=E2=80=99information.
+
+Paul
+
+>=20
+> =
+https://www.theguardian.com/science/2022/apr/28/giant-ichthyosaurs-huge-to=
+oth-points-to-sea-creatures-with-robust-bite =
+<https://www.theguardian.com/science/2022/apr/28/giant-ichthyosaurs-huge-t=
+ooth-points-to-sea-creatures-with-robust-bite>
+>=20
+> Giant ichthyosaur=E2=80=99s huge tooth points to sea creatures with =
+robust bite
+>=20
+> Rare fossils from three of the late-Triassic marine reptiles found in =
+Swiss Alps include 10cm tooth =E2=80=93 big enough to snag giant squid
+>=20
+> Nicola Davis <//www.theguardian.com/profile/nicola-davis>
+>=20
+> Reconstruction of a giant ichthyosaur from the late Triassic period, =
+bulk-feeding on small squid. Photograph: Marcello Perillo/University of =
+Bonn
+> The remains of a huge sea creature with enormous teeth that could have =
+helped it capture giant squid have been found in the Swiss Alps.
+>=20
+> Ichthyosaurs were large marine reptiles with an elongated, snakey =
+shape. They first emerged after the end of the Permian extinction, an =
+event also known as the =E2=80=9Cgreat dying=E2=80=9D =
+<https://www.theguardian.com/environment/2018/dec/06/global-warming-extinc=
+tion-report-the-great-dying>, which occurred about 250m years ago and =
+which wiped out more than two-thirds of species on land and 96% of =
+marine species.
+>=20
+> The toothy beast is one of three giant ichthyosaurs discovered in the =
+Swiss Alps and is thought to have lived during the late Triassic period, =
+about 205m years ago =E2=80=93 potentially making them some of the last =
+such behemoths.
+>=20
+> The team said the findings helped resolve the conundrum of whether =
+giant ichthyosaurs, like some smaller species of the creatures, had =
+teeth.
+>=20
+> Prof Martin Sander, of the University of Bonn, a co-author of the =
+study, said: =E2=80=9CIt=E2=80=99s all very, very scanty evidence. We =
+have these ghosts swimming in the late Triassic oceans for tens of =
+millions of years, and we don=E2=80=99t know what they look like. It=E2=80=
+=99s an embarrassment for palaeontology.
+>=20
+> =E2=80=9CFor a while we thought they had teeth. Then we thought, well, =
+we never find any teeth. Now we have the tooth of a giant and a giant =
+tooth. So some of them have teeth.=E2=80=9D
+>=20
+>=20
+> Whale-sized ichthyosaurs, right, are thought to have occasionally =
+visited shallow waters. Photograph: Jeannette R=C3=BCegg/Heinz =
+Furrer/University of Zurich
+> Writing in the Journal of Vertebrate Paleontology =
+<https://www.tandfonline.com/action/journalInformation?journalCode=3Dujvp2=
+0> the team describe how they discovered fossils from three giant =
+ichthyosaurs at different sites in the K=C3=B6ssen Formation between =
+1976 and 1990.
+>=20
+> A fossil from one of the beasts was an incomplete tooth 10cm in =
+length. The team found an enormous vertebra and rib fragments relating =
+to another. The fossils of the third included seven large vertebrae. =
+Sander said none of the remains appeared to be of known species of =
+ichthyosaur.
+>=20
+> The team say the tooth, which lacks most of its crown, is only the =
+second to have come from a giant ichthyosaur and is the largest ever =
+found for such a creature, surpassing those of a species known as =
+Himalayasaurus, which was discovered in China and is thought to have had =
+a body length of about 15 metres.
+>=20
+> =E2=80=9CIchthyosaurs have a very characteristic tooth structure =
+that=E2=80=99s visible in the root and also in the crown,=E2=80=9D said =
+Sander, adding that the toothy giant discovered in the Alps probably =
+would have eaten smaller ichthyosaurs and giant squid.
+>=20
+> Sander said one of the creatures appeared to have been about the same =
+size as Himalayasaurus, while the other two, including the toothy beast, =
+were probably similar in size to the giant ichthyosaur Shastasaurus, a =
+creature found previously in British Columbia and that was about 21 =
+metres long =E2=80=93 around two doubledecker bus lengths. =E2=80=9CThat =
+skeleton had vertebrae that are the same diameter as the ones from the =
+Alps,=E2=80=9D said Sander.
+>=20
+> But they are not the largest ichthyosaurs known to have lived. Among =
+other finds, a toothless jawbone discovered in the Bristol channel is =
+thought to have belonged to an ichthyosaur that was about 26 metres =
+long.
+>=20
+>=20
+> Shonisaurus, another member of the genus ichthyosaur from the Triassic =
+period. Photograph: Stocktrek Images/Alamy
+> While ichthyosaurs roamed around the oceans, the newly reported =
+remains were laid down in what was once a lagoon, suggesting the beasts =
+went into shallow waters. =E2=80=9CIt=E2=80=99s kind of the same problem =
+when you get a sperm whale in the North Sea,=E2=80=9D said Sander.
+>=20
+> Dr Ben Moon, a palaeontologist at the University of Bristol who was =
+not involved in the work, said it was possible the creatures might have =
+entered shallow waters to mate or give birth. He said the new report was =
+exciting as there were few fossils of giant ichthyosaurs.
+>=20
+> Dr Nick Fraser, a palaeontologist at National Museums Scotland, said =
+it was difficult to determine the size of a giant ichthyosaur based on a =
+tooth alonebut that the finds shed new light on the reptiles.
+>=20
+> =E2=80=9CUntil now we have suspected that most of the largest =
+ichthyosaurs were toothless and were suction feeders,=E2=80=9D he said, =
+adding that the size of the newly reported tooth was stunning.
+>=20
+> =E2=80=9CThe owner of this tooth was not to be messed with,=E2=80=9D =
+said Fraser. =E2=80=9CAlong with remains of vertebrae and ribs, here is =
+really concrete evidence that, in the past, Triassic waters sheltered =
+some truly massive ocean-going reptiles, possibly as large as the living =
+blue whale, and some likely had huge jaws armed with robust teeth.=E2=80=9D=
+=20
+
+--Apple-Mail=_9527D9C1-A5A5-4F6C-B60A-7EFB41D00A65
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Dutf-8"><base></head><body style=3D"word-wrap: break-word; =
+-webkit-nbsp-mode: space; line-break: after-white-space;" class=3D""><base=
+ class=3D""><div class=3D"Apple-Mail-URLShareUserContentTopClass">Salut =
+Julien,</div><div class=3D"Apple-Mail-URLShareUserContentTopClass"><br =
+class=3D""></div><div class=3D"Apple-Mail-URLShareUserContentTopClass">=C3=
+=80 titre d=E2=80=99information.</div><div =
+class=3D"Apple-Mail-URLShareUserContentTopClass"><br class=3D""></div><div=
+ class=3D"Apple-Mail-URLShareUserContentTopClass">Paul</div><div =
+class=3D"Apple-Mail-URLShareUserContentTopClass"><br class=3D""></div><div=
+ class=3D"Apple-Mail-URLShareWrapperClass"><blockquote type=3D"cite" =
+style=3D"border-left-style: none; color: inherit; padding: inherit; =
+margin: inherit;" class=3D""><div class=3D""><div =
+class=3D"original-url"><br class=3D""><a =
+href=3D"https://www.theguardian.com/science/2022/apr/28/giant-ichthyosaurs=
+-huge-tooth-points-to-sea-creatures-with-robust-bite" =
+class=3D"">https://www.theguardian.com/science/2022/apr/28/giant-ichthyosa=
+urs-huge-tooth-points-to-sea-creatures-with-robust-bite</a><br =
+class=3D""><br class=3D""></div><div id=3D"article" role=3D"article" =
+class=3D"system exported" style=3D"text-rendering: optimizeLegibility; =
+font-family: -apple-system-font; font-size: 1.2em; line-height: 1.5em; =
+margin: 0px; padding: 0px;">
+        <!-- This node will contain a number of div.page. -->
+    <div class=3D"page" style=3D"word-wrap: break-word; max-width: =
+100%;"><h1 class=3D"title" style=3D"font-size: 1.95552em; line-height: =
+1.2141em; margin-top: 0px; margin-bottom: 0.5em; max-width: 100%;">Giant =
+ichthyosaur=E2=80=99s huge tooth points to sea creatures with robust =
+bite</h1><h2 class=3D"subhead" style=3D"font-weight: normal; color: =
+rgba(27, 27, 27, 0.65); font-size: 1.46664em; margin-top: -0.35em; =
+line-height: 1.27275em; max-width: 100%;">Rare fossils from three of the =
+late-Triassic marine reptiles found in Swiss Alps include 10cm tooth =E2=80=
+=93 big enough to snag giant squid</h2><div class=3D"singleline =
+metadata" style=3D"margin-bottom: 1.45em; margin-top: -0.7em; max-width: =
+100%;"><a rel=3D"author" data-link-name=3D"auto tag link" =
+href=3D"//www.theguardian.com/profile/nicola-davis" class=3D"byline" =
+style=3D"margin: 0px; color: rgb(65, 110, 210); max-width: 100%; =
+font-size: 1em !important; display: inline !important;">Nicola =
+Davis</a></div><figure style=3D"max-width: 100%; font-size: 0.75em; =
+line-height: 1.5em; color: rgba(0, 0, 0, 0.65); margin: 0px;" =
+class=3D""><div style=3D"max-width: 100%;" class=3D""><picture =
+itemprop=3D"contentUrl" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D310d2733d269d9638dc3fafdebf=
+c063f 1240w" media=3D"(min-width: 980px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 980px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D7190606acaedcf1758ee1bf2aecae16a =
+620w" media=3D"(min-width: 980px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D700&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D4805dab3a7ff8e364f934ef3ed2=
+0c621 1400w" media=3D"(min-width: 740px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 740px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D700&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D9bd0337378b5b53758becc5eaca1736b =
+700w" media=3D"(min-width: 740px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D310d2733d269d9638dc3fafdebf=
+c063f 1240w" media=3D"(min-width: 660px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 660px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D7190606acaedcf1758ee1bf2aecae16a =
+620w" media=3D"(min-width: 660px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D310d2733d269d9638dc3fafdebf=
+c063f 1240w" media=3D"(min-width: 480px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 480px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D7190606acaedcf1758ee1bf2aecae16a =
+620w" media=3D"(min-width: 480px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D465&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D84ccb4cb9caf8f2fa4116be7c7d=
+4db11 930w" media=3D"(min-width: 375px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 375px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D465&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3Db141dd2a2e1a7ec9bb8c1f2f83ba1230 =
+465w" media=3D"(min-width: 375px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D465&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D84ccb4cb9caf8f2fa4116be7c7d=
+4db11 930w" media=3D"(min-width: 320px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 320px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D465&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3Db141dd2a2e1a7ec9bb8c1f2f83ba1230 =
+465w" media=3D"(min-width: 320px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D465&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D84ccb4cb9caf8f2fa4116be7c7d=
+4db11 930w" media=3D"(min-width: 0px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 0px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776=
+c67f46c/0_375_3508_2105/master/3508.jpg?width=3D465&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3Db141dd2a2e1a7ec9bb8c1f2f83ba1230 =
+465w" media=3D"(min-width: 0px)" style=3D"max-width: 100%;" =
+class=3D""><img alt=3D"Reconstruction of a giant ichthyosaur from the =
+late Triassic period" =
+src=3D"https://i.guim.co.uk/img/media/dc695d6a56d55ea134ada3de038ff5776c67=
+f46c/0_375_3508_2105/master/3508.jpg?width=3D465&amp;quality=3D45&amp;auto=
+=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D84ccb4cb9caf8f2fa4116be7c7d4db=
+11" height=3D"1200" width=3D"2000" class=3D"" style=3D"max-width: 100%; =
+margin: 0.5em auto; display: block; height: auto;"></picture></div><span =
+style=3D"max-width: 100%;" class=3D""><figcaption style=3D"max-width: =
+100%; margin-top: 0.8em; width: 100%; font-size: 0.75rem; color: rgba(0, =
+0, 0, 0.8);" class=3D""><span style=3D"max-width: 100%; margin-top: =
+0.25em; margin-bottom: 0.25em;" class=3D""></span><span =
+style=3D"max-width: 100%; margin-top: 0.25em; margin-bottom: 0.25em;" =
+class=3D"">Reconstruction of a giant ichthyosaur from the late Triassic =
+period, bulk-feeding on small squid.</span> Photograph: Marcello =
+Perillo/University of Bonn</figcaption></span></figure><p =
+style=3D"max-width: 100%;" class=3D"">The remains of a huge sea creature =
+with enormous teeth that could have helped it capture giant squid have =
+been found in the Swiss Alps.</p><p style=3D"max-width: 100%;" =
+class=3D"">Ichthyosaurs were large marine reptiles with an elongated, =
+snakey shape. They first emerged after the end of the Permian =
+extinction, an event <a =
+href=3D"https://www.theguardian.com/environment/2018/dec/06/global-warming=
+-extinction-report-the-great-dying" data-link-name=3D"in body link" =
+style=3D"color: rgb(65, 110, 210); max-width: 100%;" class=3D"">also =
+known as the =E2=80=9Cgreat dying=E2=80=9D</a>, which occurred about =
+250m years ago and which wiped out more than two-thirds of species on =
+land and 96% of marine species.</p><p style=3D"max-width: 100%;" =
+class=3D""><gu-island name=3D"SignInGateSelector" =
+props=3D"{&quot;format&quot;:{&quot;display&quot;:0,&quot;theme&quot;:0,&q=
+uot;design&quot;:0},&quot;contentType&quot;:&quot;Article&quot;,&quot;sect=
+ionName&quot;:&quot;science&quot;,&quot;tags&quot;:[{&quot;id&quot;:&quot;=
+science/palaeontology&quot;,&quot;type&quot;:&quot;Keyword&quot;,&quot;tit=
+le&quot;:&quot;Palaeontology&quot;},{&quot;id&quot;:&quot;science/dinosaur=
+s&quot;,&quot;type&quot;:&quot;Keyword&quot;,&quot;title&quot;:&quot;Dinos=
+aurs&quot;},{&quot;id&quot;:&quot;science/fossils&quot;,&quot;type&quot;:&=
+quot;Keyword&quot;,&quot;title&quot;:&quot;Fossils&quot;},{&quot;id&quot;:=
+&quot;world/switzerland&quot;,&quot;type&quot;:&quot;Keyword&quot;,&quot;t=
+itle&quot;:&quot;Switzerland&quot;},{&quot;id&quot;:&quot;world/europe-new=
+s&quot;,&quot;type&quot;:&quot;Keyword&quot;,&quot;title&quot;:&quot;Europ=
+e&quot;},{&quot;id&quot;:&quot;world/world&quot;,&quot;type&quot;:&quot;Ke=
+yword&quot;,&quot;title&quot;:&quot;World =
+news&quot;},{&quot;id&quot;:&quot;science/science&quot;,&quot;type&quot;:&=
+quot;Keyword&quot;,&quot;title&quot;:&quot;Science&quot;},{&quot;id&quot;:=
+&quot;type/article&quot;,&quot;type&quot;:&quot;Type&quot;,&quot;title&quo=
+t;:&quot;Article&quot;},{&quot;id&quot;:&quot;tone/news&quot;,&quot;type&q=
+uot;:&quot;Tone&quot;,&quot;title&quot;:&quot;News&quot;},{&quot;id&quot;:=
+&quot;profile/nicola-davis&quot;,&quot;type&quot;:&quot;Contributor&quot;,=
+&quot;title&quot;:&quot;Nicola =
+Davis&quot;,&quot;twitterHandle&quot;:&quot;NicolaKSDavis&quot;},{&quot;id=
+&quot;:&quot;publication/theguardian&quot;,&quot;type&quot;:&quot;Publicat=
+ion&quot;,&quot;title&quot;:&quot;The =
+Guardian&quot;},{&quot;id&quot;:&quot;theguardian/mainsection&quot;,&quot;=
+type&quot;:&quot;NewspaperBook&quot;,&quot;title&quot;:&quot;Main =
+section&quot;},{&quot;id&quot;:&quot;theguardian/mainsection/uknews&quot;,=
+&quot;type&quot;:&quot;NewspaperBookSection&quot;,&quot;title&quot;:&quot;=
+UK =
+news&quot;},{&quot;id&quot;:&quot;tracking/commissioningdesk/uk-home-news&=
+quot;,&quot;type&quot;:&quot;Tracking&quot;,&quot;title&quot;:&quot;UK =
+Home =
+News&quot;}],&quot;isPaidContent&quot;:false,&quot;isPreview&quot;:false,&=
+quot;host&quot;:&quot;https://www.theguardian.com&quot;,&quot;pageId&quot;=
+:&quot;science/2022/apr/28/giant-ichthyosaurs-huge-tooth-points-to-sea-cre=
+atures-with-robust-bite&quot;,&quot;idUrl&quot;:&quot;https://profile.theg=
+uardian.com&quot;}" clientonly=3D"true" data-gu-ready=3D"true" =
+style=3D"max-width: 100%;" class=3D""></gu-island></p><p =
+style=3D"max-width: 100%;" class=3D"">The toothy beast is one of three =
+giant ichthyosaurs discovered in the Swiss Alps and is thought to have =
+lived during the late Triassic period, about 205m years ago =E2=80=93 =
+potentially making them some of the last such behemoths. </p><p =
+style=3D"max-width: 100%;" class=3D"">The team said the findings helped =
+resolve the conundrum of whether giant ichthyosaurs, like some smaller =
+species of the creatures, had teeth.</p><p style=3D"max-width: 100%;" =
+class=3D"">Prof Martin Sander, of the University of Bonn, a co-author of =
+the study, said: =E2=80=9CIt=E2=80=99s all very, very scanty evidence. =
+We have these ghosts swimming in the late Triassic oceans for tens of =
+millions of years, and we don=E2=80=99t know what they look like. It=E2=80=
+=99s an embarrassment for palaeontology.</p><p style=3D"max-width: =
+100%;" class=3D"">=E2=80=9CFor a while we thought they had teeth. Then =
+we thought, well, we never find any teeth. Now we have the tooth of a =
+giant and a giant tooth. So some of them have teeth.=E2=80=9D</p><figure =
+data-spacefinder-role=3D"inline" =
+data-spacefinder-type=3D"model.dotcomrendering.pageElements.ImageBlockElem=
+ent" style=3D"max-width: 100%; font-size: 0.75em; line-height: 1.5em; =
+color: rgba(0, 0, 0, 0.65); margin: 0px;" class=3D""><div =
+style=3D"max-width: 100%;" class=3D""><picture itemprop=3D"contentUrl" =
+style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3Dd567aa7e9bd2fedd4c3f46acf44=
+f8b31 1240w" media=3D"(min-width: 980px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 980px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D5dc97e0ddf1349269e506745fc3e4fdf =
+620w" media=3D"(min-width: 980px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3Dd567aa7e9bd2fedd4c3f46acf44=
+f8b31 1240w" media=3D"(min-width: 740px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 740px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D5dc97e0ddf1349269e506745fc3e4fdf =
+620w" media=3D"(min-width: 740px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3Dd567aa7e9bd2fedd4c3f46acf44=
+f8b31 1240w" media=3D"(min-width: 660px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 660px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D620&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D5dc97e0ddf1349269e506745fc3e4fdf =
+620w" media=3D"(min-width: 660px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D605&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D5ab0509976018cf7cd36c7ceada=
+267a5 1210w" media=3D"(min-width: 480px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 480px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D605&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D767c87d3a82184c3623fdb2b1b37b74d =
+605w" media=3D"(min-width: 480px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D445&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3Dface7167a23725d236475ce0a7b=
+3aedf 890w" media=3D"(min-width: 375px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 375px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D445&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D6a00a07ea66f5f1255c1d1911a7f9a1e =
+445w" media=3D"(min-width: 375px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D445&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3Dface7167a23725d236475ce0a7b=
+3aedf 890w" media=3D"(min-width: 320px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 320px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D445&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D6a00a07ea66f5f1255c1d1911a7f9a1e =
+445w" media=3D"(min-width: 320px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D445&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3Dface7167a23725d236475ce0a7b=
+3aedf 890w" media=3D"(min-width: 0px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 0px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee337=
+59c6db2/0_182_3508_2105/master/3508.jpg?width=3D445&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D6a00a07ea66f5f1255c1d1911a7f9a1e =
+445w" media=3D"(min-width: 0px)" style=3D"max-width: 100%;" =
+class=3D""><img alt=3D"Whale-sized ichthyosaurs, right, are thought to =
+have occasionally visited shallow waters" =
+src=3D"https://i.guim.co.uk/img/media/3501411565e94a73a25b814d974cee33759c=
+6db2/0_182_3508_2105/master/3508.jpg?width=3D445&amp;quality=3D45&amp;auto=
+=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3Dface7167a23725d236475ce0a7b3ae=
+df" height=3D"2105" width=3D"3508" loading=3D"lazy" class=3D"" =
+style=3D"max-width: 100%; margin: 0.5em auto; display: block; height: =
+auto;"></picture></div><figcaption style=3D"max-width: 100%; margin-top: =
+0.8em; width: 100%; font-size: 0.75rem; color: rgba(0, 0, 0, 0.8);" =
+class=3D""><span style=3D"max-width: 100%; margin-top: 0.25em; =
+margin-bottom: 0.25em;" class=3D""></span><span style=3D"max-width: =
+100%; margin-top: 0.25em; margin-bottom: 0.25em;" class=3D"">Whale-sized =
+ichthyosaurs, right, are thought to have occasionally visited shallow =
+waters.</span> Photograph: Jeannette R=C3=BCegg/Heinz Furrer/University =
+of Zurich</figcaption></figure><p style=3D"max-width: 100%;" =
+class=3D"">Writing in the <a =
+href=3D"https://www.tandfonline.com/action/journalInformation?journalCode=3D=
+ujvp20" data-link-name=3D"in body link" style=3D"color: rgb(65, 110, =
+210); max-width: 100%;" class=3D"">Journal of Vertebrate =
+Paleontology</a> the team describe how they discovered fossils from =
+three giant ichthyosaurs at different sites in the K=C3=B6ssen Formation =
+between 1976 and 1990.</p><p style=3D"max-width: 100%;" class=3D"">A =
+fossil from one of the beasts was an incomplete tooth 10cm in length. =
+The team found an enormous vertebra and rib fragments relating to =
+another. The fossils of the third included seven large vertebrae. Sander =
+said none of the remains appeared to be of known species of =
+ichthyosaur.</p><p style=3D"max-width: 100%;" class=3D"">The team say =
+the tooth, which lacks most of its crown, is only the second to have =
+come from a giant ichthyosaur and is the largest ever found for such a =
+creature, surpassing those of a species known as <em style=3D"max-width: =
+100%;" class=3D"">Himalayasaurus</em>, which was discovered in China and =
+is thought to have had a body length of about 15 metres.</p><p =
+style=3D"max-width: 100%;" class=3D"">=E2=80=9CIchthyosaurs have a very =
+characteristic tooth structure that=E2=80=99s visible in the root and =
+also in the crown,=E2=80=9D said Sander, adding that the toothy giant =
+discovered in the Alps probably would have eaten smaller ichthyosaurs =
+and giant squid. </p><p style=3D"max-width: 100%;" class=3D"">Sander =
+said one of the creatures appeared to have been about the same size as =
+<em style=3D"max-width: 100%;" class=3D"">Himalayasaurus</em>, while the =
+other two, including the toothy beast, were probably similar in size to =
+the giant ichthyosaur <em style=3D"max-width: 100%;" =
+class=3D"">Shastasaurus</em>, a creature found previously in British =
+Columbia and that was about 21 metres long =E2=80=93 around two =
+doubledecker bus lengths. =E2=80=9CThat skeleton had vertebrae that are =
+the same diameter as the ones from the Alps,=E2=80=9D said Sander.</p><p =
+style=3D"max-width: 100%;" class=3D"">But they are not the largest =
+ichthyosaurs known to have lived. Among other finds, a toothless jawbone =
+discovered in the Bristol channel is thought to have belonged to an =
+ichthyosaur that was about 26 metres long. </p><figure =
+data-spacefinder-role=3D"inline" =
+data-spacefinder-type=3D"model.dotcomrendering.pageElements.ImageBlockElem=
+ent" style=3D"max-width: 100%; font-size: 0.75em; line-height: 1.5em; =
+color: rgba(0, 0, 0, 0.65); margin: 0px;" class=3D""><div =
+style=3D"max-width: 100%;" class=3D""><picture itemprop=3D"contentUrl" =
+style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D620&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D4e3d98f4d77fb4a907dbc1e345d=
+7ac83 1240w" media=3D"(min-width: 980px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 980px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D620&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D733e5766a296e7240f96317a6534a04f =
+620w" media=3D"(min-width: 980px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D620&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D4e3d98f4d77fb4a907dbc1e345d=
+7ac83 1240w" media=3D"(min-width: 740px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 740px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D620&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D733e5766a296e7240f96317a6534a04f =
+620w" media=3D"(min-width: 740px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D620&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D4e3d98f4d77fb4a907dbc1e345d=
+7ac83 1240w" media=3D"(min-width: 660px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 660px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D620&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D733e5766a296e7240f96317a6534a04f =
+620w" media=3D"(min-width: 660px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D605&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D8a02bdf9aff3c3371d2a04d8365=
+e7319 1210w" media=3D"(min-width: 480px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 480px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D605&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3Dc31752c21c2f845b308d5b846c486732 =
+605w" media=3D"(min-width: 480px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D445&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D8147ad828c5272b0560606e44a3=
+5c5bd 890w" media=3D"(min-width: 375px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 375px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D445&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D6ead31d1306ae9106b83c29898c4212e =
+445w" media=3D"(min-width: 375px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D445&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D8147ad828c5272b0560606e44a3=
+5c5bd 890w" media=3D"(min-width: 320px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 320px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D445&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D6ead31d1306ae9106b83c29898c4212e =
+445w" media=3D"(min-width: 320px)" style=3D"max-width: 100%;" =
+class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D445&amp;quality=3D45&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D8147ad828c5272b0560606e44a3=
+5c5bd 890w" media=3D"(min-width: 0px) and =
+(-webkit-min-device-pixel-ratio: 1.25), (min-width: 0px) and =
+(min-resolution: 120dpi)" style=3D"max-width: 100%;" class=3D""><source =
+srcset=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e582=
+9bec2c9/0_153_5130_3077/master/5130.jpg?width=3D445&amp;quality=3D85&amp;a=
+uto=3Dformat&amp;fit=3Dmax&amp;s=3D6ead31d1306ae9106b83c29898c4212e =
+445w" media=3D"(min-width: 0px)" style=3D"max-width: 100%;" =
+class=3D""><img alt=3D"Shonisaurus, another member of the genus =
+ichthyosaur from the Triassic period" =
+src=3D"https://i.guim.co.uk/img/media/1f211f8bc12fb46cc1eecddc478d8e5829be=
+c2c9/0_153_5130_3077/master/5130.jpg?width=3D445&amp;quality=3D45&amp;auto=
+=3Dformat&amp;fit=3Dmax&amp;dpr=3D2&amp;s=3D8147ad828c5272b0560606e44a35c5=
+bd" height=3D"3077" width=3D"5130" loading=3D"lazy" class=3D"" =
+style=3D"max-width: 100%; margin: 0.5em auto; display: block; height: =
+auto;"></picture></div><figcaption style=3D"max-width: 100%; margin-top: =
+0.8em; width: 100%; font-size: 0.75rem; color: rgba(0, 0, 0, 0.8);" =
+class=3D""><span style=3D"max-width: 100%; margin-top: 0.25em; =
+margin-bottom: 0.25em;" class=3D""></span><span style=3D"max-width: =
+100%; margin-top: 0.25em; margin-bottom: 0.25em;" class=3D"">Shonisaurus, =
+another member of the genus ichthyosaur from the Triassic period.</span> =
+Photograph: Stocktrek Images/Alamy</figcaption></figure><p =
+style=3D"max-width: 100%;" class=3D"">While ichthyosaurs roamed around =
+the oceans, the newly reported remains were laid down in what was once a =
+lagoon, suggesting the beasts went into shallow waters. =E2=80=9CIt=E2=80=99=
+s kind of the same problem when you get a sperm whale in the North =
+Sea,=E2=80=9D said Sander.</p><p style=3D"max-width: 100%;" class=3D"">Dr =
+Ben Moon, a palaeontologist at the University of Bristol who was not =
+involved in the work, said it was possible the creatures might have =
+entered shallow waters to mate or give birth. He said the new report was =
+exciting as there were few fossils of giant ichthyosaurs.</p><p =
+style=3D"max-width: 100%;" class=3D"">Dr Nick Fraser, a palaeontologist =
+at National Museums Scotland, said it was difficult to determine the =
+size of a giant ichthyosaur based on a tooth alonebut that the finds =
+shed new light on the reptiles.</p><p style=3D"max-width: 100%;" =
+class=3D"">=E2=80=9CUntil now we have suspected that most of the largest =
+ichthyosaurs were toothless and were suction feeders,=E2=80=9D he said, =
+adding that the size of the newly reported tooth was stunning.</p><p =
+style=3D"max-width: 100%;" class=3D"">=E2=80=9CThe owner of this tooth =
+was not to be messed with,=E2=80=9D said Fraser. =E2=80=9CAlong with =
+remains of vertebrae and ribs, here is really concrete evidence that, in =
+the past, Triassic waters sheltered some truly massive ocean-going =
+reptiles, possibly as large as the living blue whale, and some likely =
+had huge jaws armed with robust =
+teeth.=E2=80=9D&nbsp;</p></div></div></div></blockquote></div></body></htm=
+l>=
+
+--Apple-Mail=_9527D9C1-A5A5-4F6C-B60A-7EFB41D00A65--
