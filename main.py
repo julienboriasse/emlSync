@@ -47,6 +47,18 @@ def add_eml_to_database(conn, eml):
     return cur.lastrowid
 
 
+def select_next_task(conn):
+    sql = ''' SELECT * FROM emlTransfers 
+              WHERE status=0
+              LIMIT 0,1; '''
+    cur = conn.cursor()
+    cur.execute(sql)
+    conn.commit()
+    return cur.fetchone()
+
+
+
+
 # Connect to the local database
 db_connection = create_connection('emlSync.db')
 create_tables(db_connection)
@@ -54,7 +66,7 @@ create_tables(db_connection)
 
 # Get all the eml files from the directory
 emlFiles = []
-for root, dirs, files in os.walk(r"/Users/julien/pythonProject/emlSync"): #TODO Move all configuration to YAML file
+for root, dirs, files in os.walk(r"/Users/julien/Downloads/email_proton_2021-11-24"): #TODO Move all configuration to YAML file
     for file in files:
         if file.endswith(".eml"):
             emlFiles.append(os.path.join(root, file))
@@ -63,6 +75,7 @@ print(str(len(emlFiles)) + " emails found in the directory")
 
 
 # import eml files to the database
+db_imported = 0
 for emlFile in emlFiles:
     with open(emlFile, 'rb') as fhdl:
         raw_email = fhdl.read()
@@ -76,13 +89,20 @@ for emlFile in emlFiles:
         0
     )
 
-    print(eml_data)
-
     try:
         add_eml_to_database(db_connection, eml_data)
+        db_imported = db_imported + 1
     except Error as e:
-        print(e)
+        pass
 
+print(str(db_imported) + " new eml files imported to the database")
+
+while True:
+    eml_data = select_next_task(db_connection)
+
+    upload_eml_to_imap_server()
+
+print(eml_data)
 
 
 
