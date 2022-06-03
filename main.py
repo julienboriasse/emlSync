@@ -1,14 +1,60 @@
 import datetime
 import json
 import time
-
+import imaplib
 import eml_parser
 import os
 import sqlite3 as sl
 from sqlite3 import Error
+from time import struct_time
+import datetime
+from dateutil import parser
+
+# Configuration
+IMAP_SERVER = 'imap.mail.me.com'
+EMAIL_ACCOUNT = 'julien.boriasse'
+PASSWORD = 'ejhn-hbgg-xwhx-brwu'
+EMAIL_FOLDER = 'INBOX.ArchiveProton'
 
 # EML Parser object
 ep = eml_parser.EmlParser()
+
+
+def mailbox_login(server, account, password):
+    M = imaplib.IMAP4_SSL(server)
+    M.login(account, password)
+    return M
+
+
+def update_email_status(connection, email_id, status):
+    sql = ''' UPDATE emlTransfers SET status = ? WHERE id = ?;'''
+    cur = connection.cursor()
+    cur.execute(sql, (status, email_id))
+    connection.commit()
+
+    return cur.lastrowid
+
+
+def upload_eml_to_imap_server(email):
+
+    try:
+        date = email[4]
+        date_time = imaplib.Time2Internaldate(time.strptime(date, "%Y-%m-%d %H:%M:%S%z"))
+        with open(email[2], 'rb') as eml:
+            rv, message = M.append(EMAIL_FOLDER, None, date_time, eml.read())
+    except Exception as e:
+        rv = 'ERR'
+        message = e
+
+    return rv, message
+
+
+M = mailbox_login(IMAP_SERVER, EMAIL_ACCOUNT, PASSWORD)
+
+M.create(EMAIL_FOLDER)
+
+available_folders = list(map(lambda x: x.split()[-1].decode(), M.list()[1]))
+# print(available_folders)
 
 
 # Create database transfer table if not existing
@@ -31,7 +77,7 @@ def create_tables(connection):
                 datetime TIMESTAMP NOT NULL ,
                 full_path TEXT NOT NULL UNIQUE,
                 subject TEXT NOT NULL,
-                email_datetime TEXT NOT NULL,
+                email_datetime TIMESTAMP NOT NULL,
                 status INTEGER
             );
         """)
@@ -66,7 +112,7 @@ create_tables(db_connection)
 
 # Get all the eml files from the directory
 emlFiles = []
-for root, dirs, files in os.walk(r"/Users/julien/Downloads/email_proton_2021-11-24"): #TODO Move all configuration to YAML file
+for root, dirs, files in os.walk(r"test"): #TODO Move all configuration to YAML file
     for file in files:
         if file.endswith(".eml"):
             emlFiles.append(os.path.join(root, file))
@@ -80,6 +126,8 @@ for emlFile in emlFiles:
     with open(emlFile, 'rb') as fhdl:
         raw_email = fhdl.read()
     parsed_eml = ep.decode_email_bytes(raw_email)
+
+    # print(parsed_eml['header']['date'])
 
     eml_data = (
         datetime.datetime.now(),
@@ -97,12 +145,29 @@ for emlFile in emlFiles:
 
 print(str(db_imported) + " new eml files imported to the database")
 
+
 while True:
     eml_data = select_next_task(db_connection)
 
-    upload_eml_to_imap_server()
+    if eml_data == None:
+        break;
 
-print(eml_data)
+    rv, message = upload_eml_to_imap_server(eml_data)
+
+    # print(eml_data)
+    # print(rv)
+
+    if rv != 'OK':
+        print(message)
+
+        print("Failed to upload " + str(eml_data[2]))
+        break;
+        update_email_status(db_connection, eml_data[0], 1)
+    else:
+        update_email_status(db_connection, eml_data[0], 2)
+        print("Email " + str(eml_data[2]) + " uploaded")
+
+
 
 
 
