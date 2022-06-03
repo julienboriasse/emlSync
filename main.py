@@ -14,29 +14,34 @@ from dateutil import parser
 IMAP_SERVER = 'imap.mail.me.com'
 EMAIL_ACCOUNT = 'julien.boriasse'
 PASSWORD = 'ejhn-hbgg-xwhx-brwu'
-EMAIL_FOLDER = 'INBOX.ArchiveProton'
+EMAIL_FOLDER = 'ArchiveProton'
+DB_NAME = 'emlSync.db'
+EML_SOURCE_DIRECTORY = r'/Users/julien/Downloads/email_proton_2021-11-24'
+SCAN_FOLDERS = False
+
 
 # EML Parser object
 ep = eml_parser.EmlParser()
 
 
-def mailbox_login(server, account, password):
-    M = imaplib.IMAP4_SSL(server)
-    M.login(account, password)
-    return M
+# Connect to IMAP server
+def mailbox_login(imap_server, account, password):
+    imap_connection = imaplib.IMAP4_SSL(imap_server)
+    imap_connection.login(account, password)
+    return imap_connection
 
 
+# Update database with sync status
 def update_email_status(connection, email_id, status):
     sql = ''' UPDATE emlTransfers SET status = ? WHERE id = ?;'''
     cur = connection.cursor()
     cur.execute(sql, (status, email_id))
     connection.commit()
-
     return cur.lastrowid
 
 
+# Upload EML to IMAP server
 def upload_eml_to_imap_server(email):
-
     try:
         date = email[4]
         date_time = imaplib.Time2Internaldate(time.strptime(date, "%Y-%m-%d %H:%M:%S%z"))
@@ -106,46 +111,46 @@ def select_next_task(conn):
 
 
 # Connect to the local database
-db_connection = create_connection('emlSync.db')
+db_connection = create_connection(DB_NAME)
 create_tables(db_connection)
 
+if SCAN_FOLDERS:
+    # Get all the eml files from the directory
+    emlFiles = []
+    for root, dirs, files in os.walk(EML_SOURCE_DIRECTORY): #TODO Move all configuration to YAML file
+        for file in files:
+            if file.endswith(".eml"):
+                emlFiles.append(os.path.join(root, file))
 
-# Get all the eml files from the directory
-emlFiles = []
-for root, dirs, files in os.walk(r"test"): #TODO Move all configuration to YAML file
-    for file in files:
-        if file.endswith(".eml"):
-            emlFiles.append(os.path.join(root, file))
-
-print(str(len(emlFiles)) + " emails found in the directory")
-
-
-# import eml files to the database
-db_imported = 0
-for emlFile in emlFiles:
-    with open(emlFile, 'rb') as fhdl:
-        raw_email = fhdl.read()
-    parsed_eml = ep.decode_email_bytes(raw_email)
-
-    # print(parsed_eml['header']['date'])
-
-    eml_data = (
-        datetime.datetime.now(),
-        emlFile,
-        parsed_eml['header']['subject'],
-        parsed_eml['header']['date'],
-        0
-    )
-
-    try:
-        add_eml_to_database(db_connection, eml_data)
-        db_imported = db_imported + 1
-    except Error as e:
-        pass
-
-print(str(db_imported) + " new eml files imported to the database")
+    print(str(len(emlFiles)) + " emails found in the directory")
 
 
+    # import eml files to the database
+    db_imported = 0
+    for emlFile in emlFiles:
+        with open(emlFile, 'rb') as fhdl:
+            raw_email = fhdl.read()
+        parsed_eml = ep.decode_email_bytes(raw_email)
+
+        eml_data = (
+            datetime.datetime.now(),
+            emlFile,
+            parsed_eml['header']['subject'],
+            parsed_eml['header']['date'],
+            0
+        )
+
+        try:
+            add_eml_to_database(db_connection, eml_data)
+            db_imported = db_imported + 1
+        except Error as e:
+            pass
+
+    print(str(db_imported) + " new eml files imported to the database")
+
+
+i=5612
+nb_message = 16715
 while True:
     eml_data = select_next_task(db_connection)
 
@@ -157,6 +162,8 @@ while True:
     # print(eml_data)
     # print(rv)
 
+    print("Message " + str(i) + " sur " + str(nb_message) + " -> " + str(round(100*i/nb_message)) + "%")
+
     if rv != 'OK':
         print(message)
 
@@ -166,6 +173,9 @@ while True:
     else:
         update_email_status(db_connection, eml_data[0], 2)
         print("Email " + str(eml_data[2]) + " uploaded")
+
+    i = i+1
+
 
 
 
