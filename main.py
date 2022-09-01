@@ -12,8 +12,10 @@ from dateutil import parser
 
 # Configuration
 IMAP_SERVER = 'imap.mail.me.com'
-EMAIL_ACCOUNT = 'julien.boriasse'
-PASSWORD = 'ejhn-hbgg-xwhx-brwu'
+# Type your username here
+EMAIL_ACCOUNT = '' 
+# Type your password here.
+PASSWORD = '' # Note: For Apple, you have to generate a "Password for Application" and revoke it after migration is completed
 EMAIL_FOLDER = 'ArchiveProton'
 DB_NAME = 'emlSync.db'
 EML_SOURCE_DIRECTORY = r'/Users/julien/Downloads/email_proton_2021-11-24'
